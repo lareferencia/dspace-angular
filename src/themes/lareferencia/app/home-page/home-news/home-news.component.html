@@ -1,0 +1,37 @@
+<div class="background-image-container mt-ncs">
+  <div class="container">
+    <div class="home-news-content py-4 px-2 py-sm-5 px-sm-0 mt-0 mb-4">
+      <div class="d-flex flex-wrap">
+        <div>
+          <h1 class="display-2">DSpace 9</h1>
+          <p>Demo by La Referencia</p>
+          <p>Try logging in with ORCID</p>
+          <p>
+            Questions? Help? Contact?
+            <a
+              href="https://discord.gg/TMEmzYBPPR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Acesse nosso servidor no Discord
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <picture class="background-image">
+    <source
+      type="image/jpg"
+      srcset="
+        assets/lareferencia/images/banner.jpg 2000w,
+        assets/dspace/images/banner-half.jpg  1200w,
+        assets/dspace/images/banner-tall.jpg   768w
+      "
+    />
+    <img
+      alt=""
+      [src]="'assets/lareferencia/images/banner.jpg'"
+    /><!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
+  </picture>
+</div>
