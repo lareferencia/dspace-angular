@@ -141,6 +141,7 @@
     "json5": "^2.2.3",
     "jsonschema": "1.5.0",
     "jwt-decode": "^3.1.2",
+    "lareferencia-widget-embed": "^1.1.5",
     "leaflet": "^1.9.4",
     "leaflet-providers": "^2.0.0",
     "leaflet.markercluster": "^1.5.3",

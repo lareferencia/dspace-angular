@@ -12,8 +12,10 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-
+import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
+import { SiteStatisticsPageComponent } from './app/statistics-page/site-statistics-page/site-statistics-page.component';
 import { RootModule } from '../../app/root.module';
+
 
 const DECLARATIONS = [
 ];
@@ -32,6 +34,8 @@ const DECLARATIONS = [
     StoreRouterConnectingModule,
     TranslateModule,
     FormsModule,
+    SiteStatisticsPageComponent,
+    lareferenciaWidgetEmbedModule
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
