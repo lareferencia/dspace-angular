@@ -1,0 +1,12 @@
+{
+  "item.cite.open-modal": "Citar",
+
+  "item.cite.modal.title": "Citação",
+
+  "item.cite.modal.close": "Fechar",
+
+  "item.cite.modal.copy": "Copiar",
+
+  // TODO New key - Add a translation
+  "item.cite.modal.error": "Erro",
+}

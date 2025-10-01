@@ -82,6 +82,7 @@ export class Item extends DSpaceObject implements ChildHALResource, HandleObject
     mappedCollections: HALLink;
     relationships: HALLink;
     bundles: HALLink;
+    bibliography: HALLink;
     owningCollection: HALLink;
     templateItemOf: HALLink;
     version: HALLink;

@@ -68,6 +68,7 @@ import { SUPERVISION_ORDER } from './supervision-order/models/supervision-order.
 import { CLAIMED_TASK } from './tasks/models/claimed-task-object.resource-type';
 import { POOL_TASK } from './tasks/models/pool-task-object.resource-type';
 import { WORKFLOW_ACTION } from './tasks/models/workflow-action-object.resource-type';
+import { BIBLIOGRAPHY } from 'src/themes/lareferencia/app/shared/bibliography/bibliography.resource-type';
 
 export const LAZY_DATA_SERVICES: LazyDataServicesMap = new Map([
   [AUTHORIZATION.value, () => import('./data/feature-authorization/authorization-data.service').then(m => m.AuthorizationDataService)],
@@ -119,6 +120,7 @@ export const LAZY_DATA_SERVICES: LazyDataServicesMap = new Map([
   [ITEM.value, () => import('./data/item-data.service').then(m => m.ItemDataService)],
   [VERSION.value, () => import('./data/version-data.service').then(m => m.VersionDataService)],
   [IDENTIFIERS.value, () => import('./data/identifier-data.service').then(m => m.IdentifierDataService)],
+  [BIBLIOGRAPHY.value, () => import('../../themes/lareferencia/app/core/data/item-bibliography-data.service').then(m => m.ItemBibliographyService)],
   [FEATURE.value, () => import('./data/feature-authorization/authorization-data.service').then(m => m.AuthorizationDataService)],
   [DSPACE_OBJECT.value, () => import('./data/dspace-object-data.service').then(m => m.DSpaceObjectDataService)],
   [BITSTREAM_FORMAT.value, () => import('./data/bitstream-format-data.service').then(m => m.BitstreamFormatDataService)],
