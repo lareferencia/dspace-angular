@@ -4,12 +4,13 @@ import { DSONameService } from '../../../core/breadcrumbs/dso-name.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'ds-media-viewer-pdf',
   templateUrl: './media-viewer-pdf.component.html',
   styleUrls: ['./media-viewer-pdf.component.scss'],
-  imports: [TranslateModule],
+  imports: [TranslateModule, FormsModule],
 })
 export class MediaViewerPdfComponent {
   @Input() pdfs: MediaViewerItem[];
@@ -17,10 +18,9 @@ export class MediaViewerPdfComponent {
   blobUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl("");
   currentIndex = 0;
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer, public dsoNameService: DSONameService, private cdr: ChangeDetectorRef,) { }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer, public dsoNameService: DSONameService, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
-    console.log('initiiiiii')
     this.loadPdf(this.currentIndex);
   }
 
