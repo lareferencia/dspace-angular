@@ -1,0 +1,41 @@
+{
+    "lareferencia-widgets": {
+        "lrw": {
+            "active": true,
+            "widget_url": "https://cdn.jsdelivr.net/gh/lareferencia/lrw@2.0.7/dist/lrw.js",
+            "parameters": {
+                "widget_div_id": "usage-stats",
+                "identifier": "oai:sedici.unlp.edu.ar:10915/113959",
+                "identifier_meta_field": "",
+                "identifier_prefix": "",
+                "identifier_regex": "https://hdl.handle.net/[0-9\\.]+/([0-9]+)/?",
+                "scope_labels": {
+                    "N": "",
+                    "R": ""
+                },
+                "country": "",
+                "repository_source": ""
+            }
+        },
+        "lrhw": {
+            "active": true,
+            "widget_url": "https://cdn.jsdelivr.net/gh/lareferencia/lrhw@1.0.8/dist/assets/chunks/historic-widget.js",
+            "parameters": {
+                "widget_div_id": "lrhw-widget",
+                "repositories_list": [
+                    {
+                        "label": "Nombre del repositorio",
+                        "value": "source id"
+                    }
+                ],
+                "default_repository": {
+                    "label": "Nombre del repositorio",
+                    "value": "source id"
+                },
+                "scope_labels": {
+                    "N": "Nombre Nodo Nacional"
+                }
+            }
+        }
+    }
+}

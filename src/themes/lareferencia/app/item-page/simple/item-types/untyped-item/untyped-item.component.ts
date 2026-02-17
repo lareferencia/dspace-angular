@@ -28,15 +28,17 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'custom')
+import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
+
+@listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'lareferencia')
 @Component({
   selector: 'ds-untyped-item',
   // styleUrls: ['./untyped-item.component.scss'],
   styleUrls: [
     '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.scss',
   ],
-  // templateUrl: './untyped-item.component.html',
-  templateUrl: '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
+  templateUrl: './untyped-item.component.html',
+  //templateUrl: '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     AsyncPipe,
@@ -58,6 +60,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
+    lareferenciaWidgetEmbedModule,
   ],
 })
 export class UntypedItemComponent extends BaseComponent {

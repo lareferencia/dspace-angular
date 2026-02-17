@@ -27,14 +27,17 @@ import { listableObjectComponent } from '../../../../../../../app/shared/object-
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 
-@listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'custom')
+import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
+
+@listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'lareferencia')
 @Component({
   selector: 'ds-publication',
-  // styleUrls: ['./publication.component.scss'],
-  styleUrls: ['../../../../../../../app/item-page/simple/item-types/publication/publication.component.scss'],
-  // templateUrl: './publication.component.html',
-  templateUrl: '../../../../../../../app/item-page/simple/item-types/publication/publication.component.html',
+  styleUrls: ['./publication.component.scss'],
+  // styleUrls: ['../../../../../../../app/item-page/simple/item-types/publication/publication.component.scss'],
+  templateUrl: './publication.component.html',
+  // templateUrl: '../../../../../../../app/item-page/simple/item-types/publication/publication.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
   imports: [
     AsyncPipe,
     CollectionsComponent,
@@ -55,6 +58,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
     ThemedResultsBackButtonComponent,
     ThemedThumbnailComponent,
     TranslateModule,
+    lareferenciaWidgetEmbedModule,
   ],
 })
 export class PublicationComponent extends BaseComponent {
