@@ -2,76 +2,101 @@
   <div class="container">
     <div class="row align-items-center gy-5">
       <!-- Left Column: Title & Description -->
-      <div class="col-lg-6 text-white">
-        <h2 class="display-5 fw-bold mb-4 text-white">
-          Hub Regional de <br />
-          <span style="color: #04bab8;">Infraestructura y Capacidades</span>
+      <div class="col-lg-7 text-white">
+        <h2 class="display-4 fw-bold mb-4 text-white">
+          {{ "home.news.heading.part1" | translate }} <br />
+          <span style="color: #04bab8">{{
+            "home.news.heading.part2" | translate
+            }}</span>
         </h2>
-        <p class="lead mb-4" style="max-width: 500px; color: rgba(255,255,255,0.9);">
-          Repositorio central de recursos técnicos, documentación y activos
-          digitales para fortalecer la ciencia abierta en América Latina.
+        <p class="lead mb-4" style="max-width: 600px; color: rgba(255, 255, 255, 0.9)">
+          {{ "home.news.description" | translate }}
         </p>
-        <a href="#" class="btn btn-light text-primary btn-lg px-4 rounded-pill fw-bold">
-          Ver Novedades <i class="fas fa-arrow-right ms-2"></i>
+
+        <div class="mb-5 search-form-wrapper">
+          <ds-themed-search-form [inPlaceSearch]="false"
+            [searchPlaceholder]="'home.search-form.placeholder' | translate"></ds-themed-search-form>
+        </div>
+
+        <a href="#" class="btn btn-light text-primary btn-lg px-4 rounded-pill fw-bold shadow-sm">
+          {{ "home.news.button.view-news" | translate }}
+          <i class="fas fa-arrow-right ms-2"></i>
         </a>
       </div>
 
       <!-- Right Column: Interactive Cards -->
-      <div class="col-lg-6">
-        <div class="d-grid gap-3">
+      <div class="col-lg-5">
+        <div class="d-grid gap-2">
           <!-- Card 1 -->
-          <a href="#" class="card-link-custom">
-            <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-0 h-100">
-              <div class="icon-box bg-light-custom text-brand-1 rounded-circle p-3 me-3">
+          <a href="https://dspace-prd.lareferencia.info/handle/123456789/1" class="card-link-custom" target="_blank"
+            rel="noopener noreferrer">
+            <div class="d-flex align-items-center p-2 px-3 bg-white rounded-3 shadow-sm border-0 h-100">
+              <div class="icon-box bg-light-custom text-brand-1 rounded-circle p-2 me-3">
                 <i class="fas fa-folder-open"></i>
               </div>
               <div class="flex-grow-1">
-                <h5 class="mb-1 fw-bold text-dark">Explorar Proyectos</h5>
-                <small class="text-muted">Descubre iniciativas en curso</small>
+                <h6 class="mb-0 fw-bold text-dark">
+                  {{ "home.news.card.projects.title" | translate }}
+                </h6>
+                <small class="text-muted d-block" style="font-size: 0.75rem;">{{
+                  "home.news.card.projects.description" | translate
+                  }}</small>
               </div>
-              <i class="fas fa-chevron-right chevron-icon"></i>
+              <i class="fas fa-chevron-right chevron-icon" style="font-size: 0.8rem;"></i>
             </div>
           </a>
 
           <!-- Card 2 -->
           <a href="#" class="card-link-custom">
-            <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-0 h-100">
-              <div class="icon-box bg-light-custom text-brand-2 rounded-circle p-3 me-3">
+            <div class="d-flex align-items-center p-2 px-3 bg-white rounded-3 shadow-sm border-0 h-100">
+              <div class="icon-box bg-light-custom text-brand-2 rounded-circle p-2 me-3">
                 <i class="fas fa-palette"></i>
               </div>
               <div class="flex-grow-1">
-                <h5 class="mb-1 fw-bold text-dark">Configuración del Tema</h5>
-                <small class="text-muted">Personaliza la apariencia</small>
+                <h6 class="mb-0 fw-bold text-dark">
+                  {{ "home.news.card.theme.title" | translate }}
+                </h6>
+                <small class="text-muted d-block" style="font-size: 0.75rem;">{{
+                  "home.news.card.theme.description" | translate
+                  }}</small>
               </div>
-              <i class="fas fa-chevron-right chevron-icon"></i>
+              <i class="fas fa-chevron-right chevron-icon" style="font-size: 0.8rem;"></i>
             </div>
           </a>
 
           <!-- Card 3 -->
           <a href="#" class="card-link-custom">
-            <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-0 h-100">
-              <div class="icon-box bg-light-custom text-brand-3 rounded-circle p-3 me-3">
+            <div class="d-flex align-items-center p-2 px-3 bg-white rounded-3 shadow-sm border-0 h-100">
+              <div class="icon-box bg-light-custom text-brand-3 rounded-circle p-2 me-3">
                 <i class="fas fa-book"></i>
               </div>
               <div class="flex-grow-1">
-                <h5 class="mb-1 fw-bold text-dark">Documentación Infra</h5>
-                <small class="text-muted">Guías técnicas y manuales</small>
+                <h6 class="mb-0 fw-bold text-dark">
+                  {{ "home.news.card.documentation.title" | translate }}
+                </h6>
+                <small class="text-muted d-block" style="font-size: 0.75rem;">{{
+                  "home.news.card.documentation.description" | translate
+                  }}</small>
               </div>
-              <i class="fas fa-chevron-right chevron-icon"></i>
+              <i class="fas fa-chevron-right chevron-icon" style="font-size: 0.8rem;"></i>
             </div>
           </a>
 
           <!-- Card 4 -->
           <a href="#" class="card-link-custom">
-            <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-0 h-100">
-              <div class="icon-box bg-light-custom text-brand-4 rounded-circle p-3 me-3">
+            <div class="d-flex align-items-center p-2 px-3 bg-white rounded-3 shadow-sm border-0 h-100">
+              <div class="icon-box bg-light-custom text-brand-4 rounded-circle p-2 me-3">
                 <i class="fas fa-tachometer-alt"></i>
               </div>
               <div class="flex-grow-1">
-                <h5 class="mb-1 fw-bold text-dark">Panel de Control</h5>
-                <small class="text-muted">Estadísticas y métricas</small>
+                <h6 class="mb-0 fw-bold text-dark">
+                  {{ "home.news.card.dashboard.title" | translate }}
+                </h6>
+                <small class="text-muted d-block" style="font-size: 0.75rem;">{{
+                  "home.news.card.dashboard.description" | translate
+                  }}</small>
               </div>
-              <i class="fas fa-chevron-right chevron-icon"></i>
+              <i class="fas fa-chevron-right chevron-icon" style="font-size: 0.8rem;"></i>
             </div>
           </a>
         </div>

@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { RootModule } from '../../app/root.module';
+import { TranslateModule } from '@ngx-translate/core';
 import { JournalComponent } from './app/entity-groups/journal-entities/item-pages/journal/journal.component';
 import { JournalIssueComponent } from './app/entity-groups/journal-entities/item-pages/journal-issue/journal-issue.component';
 import { JournalVolumeComponent } from './app/entity-groups/journal-entities/item-pages/journal-volume/journal-volume.component';
@@ -78,6 +79,7 @@ const DECLARATIONS = [
   imports: [
     CommonModule,
     RootModule,
+    TranslateModule,
     ...DECLARATIONS,
   ],
   providers: [

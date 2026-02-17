@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.hero-search-form {
+  max-width: 800px;
+  margin: 0 auto;
+
+  .input-group {
+    transition:
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 1rem 0.2rem rgba(0, 0, 0, 0.175) !important;
+      transform: translateY(-2px);
+    }
+  }
+
+  input.form-control {
+    box-shadow: none !important; // Remove default bootstrap focus shadow
+    font-size: 1.1rem;
+
+    &::placeholder {
+      color: #adb5bd;
+    }
+  }
+
+  .btn-primary {
+    transition: all 0.2s;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+  }
+
+  // Adjust scope button if present
+  .scope-button {
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+      background-color: #f8f9fa;
+      color: var(--bs-primary);
+    }
+  }
+}

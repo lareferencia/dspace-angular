@@ -1,6 +1,7 @@
 :host {
   header {
     background-color: var(--ds-header-bg);
+    border-color: #f1686a;
   }
 
   .navbar-brand img {
@@ -12,7 +13,8 @@
     border: none;
     color: var(--ds-header-icon-color);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: var(--ds-header-icon-color-hover);
     }
 
@@ -23,7 +25,8 @@
     }
   }
 
-  .navbar, div[role="toolbar"] {
+  .navbar,
+  div[role="toolbar"] {
     display: flex;
     gap: calc(var(--bs-spacer) / 3);
     align-items: center;
