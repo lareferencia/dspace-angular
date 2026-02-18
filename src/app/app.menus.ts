@@ -5,9 +5,9 @@
  *
  * http://www.dspace.org/license/
  */
-import { buildMenuStructure } from './shared/menu/menu.structure';
 import { MenuID } from './shared/menu/menu-id.model';
 import { MenuRoute } from './shared/menu/menu-route.model';
+import { buildMenuStructure } from './shared/menu/menu.structure';
 import { AccessControlMenuProvider } from './shared/menu/providers/access-control.menu';
 import { AdminSearchMenuProvider } from './shared/menu/providers/admin-search.menu';
 import { BrowseMenuProvider } from './shared/menu/providers/browse.menu';
@@ -31,6 +31,7 @@ import { ProcessesMenuProvider } from './shared/menu/providers/processes.menu';
 import { RegistriesMenuProvider } from './shared/menu/providers/registries.menu';
 import { StatisticsMenuProvider } from './shared/menu/providers/statistics.menu';
 import { SystemWideAlertMenuProvider } from './shared/menu/providers/system-wide-alert.menu';
+import { UserActivityReportMenuProvider } from './shared/menu/providers/user-activity-report.menu';
 import { WithdrawnReinstateItemMenuProvider } from './shared/menu/providers/withdrawn-reinstate-item.menu';
 import { WorkflowMenuProvider } from './shared/menu/providers/workflow.menu';
 
@@ -66,6 +67,7 @@ export const MENUS = buildMenuStructure({
     AdminSearchMenuProvider,
     CreateReportMenuProvider,
     RegistriesMenuProvider,
+    UserActivityReportMenuProvider,
     CurationMenuProvider,
     ProcessesMenuProvider,
     WorkflowMenuProvider,
