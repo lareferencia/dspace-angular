@@ -749,6 +749,74 @@
 
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item has metadata that is not accessible to Anonymous user",
 
+  "admin.reports.user-activity.title": "User Activity Report",
+
+  "admin.reports.user-activity.breadcrumbs": "User Activity Report",
+
+  "admin.reports.user-activity.description": "View detailed statistics about user activity across submissions and reviews",
+
+  "admin.reports.user-activity.summary": "Summary",
+
+  "admin.reports.user-activity.userStats": "User Statistics",
+
+  "admin.reports.user-activity.actions": "All Actions",
+
+  "admin.reports.user-activity.totalUsers": "Total Users",
+
+  "admin.reports.user-activity.totalSubmissions": "Total Submissions",
+
+  "admin.reports.user-activity.totalReviews": "Total Reviews",
+
+  "admin.reports.user-activity.totalApprovals": "Total Approvals",
+
+  "admin.reports.user-activity.totalRejections": "Total Rejections",
+
+  "admin.reports.user-activity.totalWithdrawals": "Total Withdrawals",
+
+  "admin.reports.user-activity.reportSummary": "Report Summary",
+
+  "admin.reports.user-activity.userStatistics": "User Statistics",
+
+  "admin.reports.user-activity.allActions": "All Actions",
+
+  "admin.reports.user-activity.downloadCSV": "Download CSV",
+
+  "admin.reports.user-activity.name": "Name",
+
+  "admin.reports.user-activity.email": "Email",
+
+  "admin.reports.user-activity.submissions": "Submissions",
+
+  "admin.reports.user-activity.reviews": "Reviews",
+
+  "admin.reports.user-activity.approvals": "Approvals",
+
+  "admin.reports.user-activity.rejections": "Rejections",
+
+  "admin.reports.user-activity.withdrawals": "Withdrawals",
+
+  "admin.reports.user-activity.searchByEmailOrName": "Search by email or name...",
+
+  "admin.reports.user-activity.action": "Action",
+
+  "admin.reports.user-activity.user": "User",
+
+  "admin.reports.user-activity.date": "Date",
+
+  "admin.reports.user-activity.details": "Details",
+
+  "admin.reports.user-activity.submitted": "Submitted",
+
+  "admin.reports.user-activity.reviewed": "Reviewed",
+
+  "admin.reports.user-activity.approved": "Approved",
+
+  "admin.reports.user-activity.rejected": "Rejected",
+
+  "admin.reports.user-activity.withdrawn": "Withdrawn",
+
+  "admin.reports.user-activity.noResults": "No results found",
+
   "admin.search.breadcrumbs": "Administrative Search",
 
   "admin.search.collection.edit": "Edit",
@@ -3514,6 +3582,8 @@
   "menu.section.reports.collections": "Filtered Collections",
 
   "menu.section.reports.queries": "Metadata Query",
+
+  "menu.section.reports.user-activity": "User Activity Report",
 
   "menu.section.admin_search": "Admin Search",
 

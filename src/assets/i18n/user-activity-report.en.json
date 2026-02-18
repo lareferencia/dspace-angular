@@ -1,0 +1,32 @@
+{
+  "admin": {
+    "reports": {
+      "user-activity": {
+        "title": "User Activity Report",
+        "description": "View detailed statistics about user activity across submissions and reviews",
+        "summary": "Summary",
+        "userStats": "User Statistics",
+        "actions": "All Actions",
+        "totalUsers": "Total Users",
+        "totalSubmissions": "Total Submissions",
+        "totalReviews": "Total Reviews",
+        "reportSummary": "Report Summary",
+        "userStatistics": "User Statistics",
+        "allActions": "All Actions",
+        "downloadCSV": "Download CSV",
+        "name": "Name",
+        "email": "Email",
+        "submissions": "Submissions",
+        "reviews": "Reviews",
+        "searchByEmailOrName": "Search by email or name...",
+        "action": "Action",
+        "user": "User",
+        "date": "Date",
+        "details": "Details",
+        "submitted": "Submitted",
+        "reviewed": "Reviewed",
+        "noResults": "No results found"
+      }
+    }
+  }
+}

@@ -1130,6 +1130,108 @@
   // "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item has metadata that is not accessible to Anonymous user",
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item con metadatos no accesibles a usuarios anónimos",
 
+  // "admin.reports.user-activity.title": "User Activity Report",
+  "admin.reports.user-activity.title": "Informe de actividad de usuarios",
+
+  // "admin.reports.user-activity.breadcrumbs": "User Activity Report",
+  "admin.reports.user-activity.breadcrumbs": "Informe de actividad de usuarios",
+
+  // "admin.reports.user-activity.description": "View detailed statistics about user activity across submissions and reviews",
+  "admin.reports.user-activity.description": "Ver estadísticas detalladas sobre la actividad de los usuarios en envíos y revisiones",
+
+  // "admin.reports.user-activity.summary": "Summary",
+  "admin.reports.user-activity.summary": "Resumen",
+
+  // "admin.reports.user-activity.userStats": "User Statistics",
+  "admin.reports.user-activity.userStats": "Estadísticas de usuario",
+
+  // "admin.reports.user-activity.actions": "All Actions",
+  "admin.reports.user-activity.actions": "Todas las acciones",
+
+  // "admin.reports.user-activity.totalUsers": "Total Users",
+  "admin.reports.user-activity.totalUsers": "Total de usuarios",
+
+  // "admin.reports.user-activity.totalSubmissions": "Total Submissions",
+  "admin.reports.user-activity.totalSubmissions": "Total de envíos",
+
+  // "admin.reports.user-activity.totalReviews": "Total Reviews",
+  "admin.reports.user-activity.totalReviews": "Total de revisiones",
+
+  // "admin.reports.user-activity.totalApprovals": "Total Approvals",
+  "admin.reports.user-activity.totalApprovals": "Total de aprobaciones",
+
+  // "admin.reports.user-activity.totalRejections": "Total Rejections",
+  "admin.reports.user-activity.totalRejections": "Total de rechazos",
+
+  // "admin.reports.user-activity.totalWithdrawals": "Total Withdrawals",
+  "admin.reports.user-activity.totalWithdrawals": "Total de retiros",
+
+  // "admin.reports.user-activity.reportSummary": "Report Summary",
+  "admin.reports.user-activity.reportSummary": "Resumen del informe",
+
+  // "admin.reports.user-activity.userStatistics": "User Statistics",
+  "admin.reports.user-activity.userStatistics": "Estadísticas de usuario",
+
+  // "admin.reports.user-activity.allActions": "All Actions",
+  "admin.reports.user-activity.allActions": "Todas las acciones",
+
+  // "admin.reports.user-activity.downloadCSV": "Download CSV",
+  "admin.reports.user-activity.downloadCSV": "Descargar CSV",
+
+  // "admin.reports.user-activity.name": "Name",
+  "admin.reports.user-activity.name": "Nombre",
+
+  // "admin.reports.user-activity.email": "Email",
+  "admin.reports.user-activity.email": "Email",
+
+  // "admin.reports.user-activity.submissions": "Submissions",
+  "admin.reports.user-activity.submissions": "Envíos",
+
+  // "admin.reports.user-activity.reviews": "Reviews",
+  "admin.reports.user-activity.reviews": "Revisiones",
+
+  // "admin.reports.user-activity.approvals": "Approvals",
+  "admin.reports.user-activity.approvals": "Aprobaciones",
+
+  // "admin.reports.user-activity.rejections": "Rejections",
+  "admin.reports.user-activity.rejections": "Rechazos",
+
+  // "admin.reports.user-activity.withdrawals": "Withdrawals",
+  "admin.reports.user-activity.withdrawals": "Retiros",
+
+  // "admin.reports.user-activity.searchByEmailOrName": "Search by email or name...",
+  "admin.reports.user-activity.searchByEmailOrName": "Buscar por email o nombre...",
+
+  // "admin.reports.user-activity.action": "Action",
+  "admin.reports.user-activity.action": "Acción",
+
+  // "admin.reports.user-activity.user": "User",
+  "admin.reports.user-activity.user": "Usuario",
+
+  // "admin.reports.user-activity.date": "Date",
+  "admin.reports.user-activity.date": "Fecha",
+
+  // "admin.reports.user-activity.details": "Details",
+  "admin.reports.user-activity.details": "Detalles",
+
+  // "admin.reports.user-activity.submitted": "Submitted",
+  "admin.reports.user-activity.submitted": "Enviado",
+
+  // "admin.reports.user-activity.reviewed": "Reviewed",
+  "admin.reports.user-activity.reviewed": "Revisado",
+
+  // "admin.reports.user-activity.approved": "Approved",
+  "admin.reports.user-activity.approved": "Aprobado",
+
+  // "admin.reports.user-activity.rejected": "Rejected",
+  "admin.reports.user-activity.rejected": "Rechazado",
+
+  // "admin.reports.user-activity.withdrawn": "Withdrawn",
+  "admin.reports.user-activity.withdrawn": "Retirado",
+
+  // "admin.reports.user-activity.noResults": "No results found",
+  "admin.reports.user-activity.noResults": "No se encontraron resultados",
+
   // "admin.search.breadcrumbs": "Administrative Search",
   "admin.search.breadcrumbs": "Búsqueda administrativa",
 
@@ -5220,6 +5322,9 @@
 
   // "menu.section.reports.queries": "Metadata Query",
   "menu.section.reports.queries": "Consulta de metadatos",
+
+  // "menu.section.reports.user-activity": "User Activity Report",
+  "menu.section.reports.user-activity": "Informe de actividad de usuarios",
 
   // "menu.section.admin_search": "Admin Search",
   "menu.section.admin_search": "Búsqueda de administrador",
