@@ -32,4 +32,8 @@
   "home.news.card.dashboard.description": "Estadísticas y métricas",
   "home.top-level-communities.view-collections": "Ver Colecciones",
   "footer.copyright.text": "LA Referencia Lyrasis - Todos los derechos reservados ©{{year}}",
+  "media-viewer.pdf.browser-not-support": "Este navegador no soporta PDFs. Por favor descarga el PDF para verlo:",
+  "media-viewer.pdf.download": "Descargar PDF",
+  "media-viewer.pdf.files": "Archivos",
+  "media-viewer.loading": "Cargando",
 }

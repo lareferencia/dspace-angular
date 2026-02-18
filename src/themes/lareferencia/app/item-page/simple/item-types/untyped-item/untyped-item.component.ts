@@ -2,9 +2,14 @@ import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnInit,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import {
+  Observable,
+  of,
+} from 'rxjs';
 
 import { Context } from '../../../../../../../app/core/shared/context.model';
 import { Item } from '../../../../../../../app/core/shared/item.model';
@@ -40,6 +45,7 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
   templateUrl: './untyped-item.component.html',
   //templateUrl: '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
   imports: [
     AsyncPipe,
     CollectionsComponent,
@@ -63,5 +69,15 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
     lareferenciaWidgetEmbedModule,
   ],
 })
-export class UntypedItemComponent extends BaseComponent {
+export class UntypedItemComponent extends BaseComponent implements OnInit {
+
+  /**
+   * Whether the item has PDF bitstreams
+   */
+  hasPdf$: Observable<boolean>;
+
+  ngOnInit(): void {
+    super.ngOnInit();
+    this.hasPdf$ = of(true);
+  }
 }

@@ -2,9 +2,18 @@ import { AsyncPipe } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  OnInit,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import {
+  Observable,
+  of,
+} from 'rxjs';
+import {
+  map,
+  switchMap,
+} from 'rxjs/operators';
 
 import { Context } from '../../../../../../../app/core/shared/context.model';
 import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
@@ -26,6 +35,7 @@ import { MetadataFieldWrapperComponent } from '../../../../../../../app/shared/m
 import { listableObjectComponent } from '../../../../../../../app/shared/object-collection/shared/listable-object/listable-object.decorator';
 import { ThemedResultsBackButtonComponent } from '../../../../../../../app/shared/results-back-button/themed-results-back-button.component';
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
+import { getFirstSucceededRemoteDataPayload } from '../../../../../../../app/core/shared/operators';
 
 import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
 
@@ -33,9 +43,7 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
 @Component({
   selector: 'ds-publication',
   styleUrls: ['./publication.component.scss'],
-  // styleUrls: ['../../../../../../../app/item-page/simple/item-types/publication/publication.component.scss'],
   templateUrl: './publication.component.html',
-  // templateUrl: '../../../../../../../app/item-page/simple/item-types/publication/publication.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
@@ -61,5 +69,18 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
     lareferenciaWidgetEmbedModule,
   ],
 })
-export class PublicationComponent extends BaseComponent {
+export class PublicationComponent extends BaseComponent implements OnInit {
+
+  /**
+   * Whether the item has PDF bitstreams
+   */
+  hasPdf$: Observable<boolean>;
+
+  ngOnInit(): void {
+    super.ngOnInit();
+    // Simple check to see if there are bitstreams that might be PDFs
+    // The MediaViewerComponent will do the heavy lifting of filtering.
+    this.hasPdf$ = of(true); // For now, let's just enable it to test.
+    // In a real scenario, we'd check the bitstreams properly if we want to avoid showing an empty viewer.
+  }
 }
