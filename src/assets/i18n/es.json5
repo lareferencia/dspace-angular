@@ -750,8 +750,6 @@
 
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item con metadatos no accesibles a usuarios anónimos",
 
-<<<<<<< ours
-=======
   // "admin.reports.user-activity.title": "User Activity Report",
   "admin.reports.user-activity.title": "Informe de actividad de usuarios",
 
@@ -855,7 +853,6 @@
   "admin.reports.user-activity.noResults": "No se encontraron resultados",
 
   // "admin.search.breadcrumbs": "Administrative Search",
->>>>>>> theirs
   "admin.search.breadcrumbs": "Búsqueda administrativa",
 
   "admin.search.collection.edit": "Editar",
@@ -3548,13 +3545,10 @@
 
   "menu.section.reports.queries": "Consulta de metadatos",
 
-<<<<<<< ours
-=======
   // "menu.section.reports.user-activity": "User Activity Report",
   "menu.section.reports.user-activity": "Informe de actividad de usuarios",
 
   // "menu.section.admin_search": "Admin Search",
->>>>>>> theirs
   "menu.section.admin_search": "Búsqueda de administrador",
 
   "menu.section.browse_community": "Esta comunidad",
@@ -7431,8 +7425,6 @@
 
   "file-download-link.request-copy": "Request a copy of ",
 
-<<<<<<< ours
-<<<<<<< ours
   "item.preview.organization.url": "URL",
 
   "item.preview.organization.address.addressLocality": "City",
@@ -7470,7 +7462,7 @@
   "footer.copyright.text": "LA Referencia Lyrasis - Todos los derechos reservados ©{{year}}",
 
   "home.news.heading": "Bienvenido a LA Referencia",
-=======
+
   "media-viewer.pdf.files": "Archivos",
 
   "media-viewer.pdf.browser-not-support": "Tu navegador no es compatible con el visor de PDF.",
@@ -7478,8 +7470,7 @@
   "media-viewer.pdf.download": "Descargar el PDF",
 
   "media-viewer.loading": "Cargando",
->>>>>>> theirs
-=======
+
   "item.cite.open-modal": "Cita",
 
   "item.cite.modal.title": "Cita",
@@ -7500,7 +7491,6 @@
   "bibtex": "BibTeX",
 
   "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
->>>>>>> theirs
 
   "home.news.button.view-collections": "Ver Colecciones",
 }

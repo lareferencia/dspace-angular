@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { APP_CONFIG, AppConfig } from '@dspace/config/app-config.interface';
 import { RESTURLCombiner } from '../../../core/url-combiner/rest-url-combiner';
 
 export interface UserAction {
@@ -48,15 +47,13 @@ export interface ReportSummary {
   providedIn: 'root'
 })
 export class UserActivityReportService {
-  private readonly appConfig: AppConfig = inject(APP_CONFIG);
-
   constructor(private http: HttpClient) {}
 
   /**
    * Get the full user activity report
    */
   getFullReport(): Observable<UserActivityReport> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/report').toString();
+    const url = new RESTURLCombiner('/reporting/user-activity/report').toString();
     return this.http.get<UserActivityReport>(url);
   }
 
@@ -64,7 +61,7 @@ export class UserActivityReportService {
    * Get statistics for a specific user by email
    */
   getUserReport(email: string): Observable<UserActivityStats> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/user', encodeURIComponent(email)).toString();
+    const url = new RESTURLCombiner('/reporting/user-activity/user', encodeURIComponent(email)).toString();
     return this.http.get<UserActivityStats>(url);
   }
 
@@ -72,7 +69,7 @@ export class UserActivityReportService {
    * Get summary statistics only
    */
   getSummary(): Observable<ReportSummary> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/summary').toString();
+    const url = new RESTURLCombiner('/reporting/user-activity/summary').toString();
     return this.http.get<ReportSummary>(url);
   }
 
@@ -80,7 +77,7 @@ export class UserActivityReportService {
    * Get all actions without aggregation
    */
   getAllActions(): Observable<UserAction[]> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/actions').toString();
+    const url = new RESTURLCombiner('/reporting/user-activity/actions').toString();
     return this.http.get<UserAction[]>(url);
   }
 }

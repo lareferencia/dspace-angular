@@ -7,12 +7,12 @@
  */
 
 import { Injectable } from '@angular/core';
-import { AuthorizationDataService } from '@dspace/core/data/feature-authorization/authorization-data.service';
-import { FeatureID } from '@dspace/core/data/feature-authorization/feature-id';
 import { combineLatest, map, Observable } from 'rxjs';
 
 import { MenuItemType } from '../menu-item-type.model';
 import { AbstractMenuProvider, PartialMenuSection } from '../menu-provider.model';
+import { AuthorizationDataService } from 'src/app/core/data/feature-authorization/authorization-data.service';
+import { FeatureID } from 'src/app/core/data/feature-authorization/feature-id';
 
 /**
  * Menu provider to create the "User Activity Report" menu in the admin sidebar

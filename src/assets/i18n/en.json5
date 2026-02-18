@@ -7394,8 +7394,6 @@
 
   "item.preview.organization.alternateName": "Alternative name",
 
-<<<<<<< ours
-<<<<<<< ours
   "community.no-description": "No description available",
 
   "home.news.heading.part1": "Regional Hub for",
@@ -7429,8 +7427,7 @@
   "home.news.button.view-collections": "View Collections",
 
   "home.news.heading": "Welcome to LA Referencia",
-}
-=======
+
   "media-viewer.pdf.files": "Files",
 
   "media-viewer.pdf.browser-not-support": "Your browser does not support the PDF viewer.",
@@ -7438,7 +7435,7 @@
   "media-viewer.pdf.download": "Download the PDF",
 
   "media-viewer.loading": "Loading",
-=======
+
   "item.cite.open-modal": "Cite",
 
   "item.cite.modal.title": "Cite",
@@ -7460,6 +7457,5 @@
 
   "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
 
->>>>>>> theirs
 }
->>>>>>> theirs
+

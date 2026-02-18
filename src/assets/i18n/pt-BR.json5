@@ -750,8 +750,6 @@
 
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "O item possui metadados que não estão acessíveis ao usuário anônimo",
 
-<<<<<<< ours
-=======
   // "admin.reports.user-activity.title": "User Activity Report",
   "admin.reports.user-activity.title": "Relatório de Atividade de Usuários",
 
@@ -855,7 +853,6 @@
   "admin.reports.user-activity.noResults": "Nenhum resultado encontrado",
 
   // "admin.search.breadcrumbs": "Administrative Search",
->>>>>>> theirs
   "admin.search.breadcrumbs": "Pesquisa Administrativa",
 
   "admin.search.collection.edit": "Editar",
@@ -3548,13 +3545,10 @@
 
   "menu.section.reports.queries": "Consultas de Metadados",
 
-<<<<<<< ours
-=======
   // "menu.section.reports.user-activity": "User Activity Report",
   "menu.section.reports.user-activity": "Relatório de Atividade de Usuários",
 
   // "menu.section.admin_search": "Admin Search",
->>>>>>> theirs
   "menu.section.admin_search": "Pesquisa Administrativa",
 
   "menu.section.browse_community": "Esta Comunidade",
@@ -7437,8 +7431,6 @@
 
   "item.preview.organization.alternateName": "Nome alternativo",
 
-<<<<<<< ours
-<<<<<<< ours
   "community.no-description": "Sem descrição disponível",
 
   "home.news.heading.part1": "Hub Regional de",
@@ -7472,8 +7464,7 @@
   "home.news.heading": "Bem-vindo à LA Referencia",
 
   "home.news.button.view-collections": "Ver Coleções",
-}
-=======
+
   "media-viewer.pdf.files": "Arquivos",
 
   "media-viewer.pdf.browser-not-support": "Seu navegador não é compatível com o visualizador de PDF.",
@@ -7482,7 +7473,6 @@
 
   "media-viewer.loading": "Carregando",
 
-=======
   "item.cite.open-modal": "Citar",
 
   "item.cite.modal.title": "Citar",
@@ -7503,6 +7493,5 @@
   "bibtex": "BibTeX",
 
   "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
->>>>>>> theirs
 }
->>>>>>> theirs
+
