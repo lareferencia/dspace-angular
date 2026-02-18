@@ -7325,6 +7325,7 @@
   "item.preview.organization.alternateName": "Nome alternativo",
 
 <<<<<<< ours
+<<<<<<< ours
   "community.no-description": "Sem descrição disponível",
 
   "home.news.heading.part1": "Hub Regional de",
@@ -7368,5 +7369,27 @@
 
   "media-viewer.loading": "Carregando",
 
+=======
+  "item.cite.open-modal": "Citar",
+
+  "item.cite.modal.title": "Citar",
+
+  "item.cite.modal.close": "Fechar",
+
+  "item.cite.modal.copy": "Copiar",
+
+  // TODO New key - Add a translation
+  "item.cite.modal.error": "Erro",
+
+  "modern-language-association": "MLA",
+
+  "apa": "APA",
+
+  "vancouver": "Vancouver",
+
+  "bibtex": "BibTeX",
+
+  "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
+>>>>>>> theirs
 }
 >>>>>>> theirs

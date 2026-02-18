@@ -7319,6 +7319,7 @@
   "file-download-link.request-copy": "Request a copy of ",
 
 <<<<<<< ours
+<<<<<<< ours
   "item.preview.organization.url": "URL",
 
   "item.preview.organization.address.addressLocality": "City",
@@ -7364,6 +7365,28 @@
   "media-viewer.pdf.download": "Descargar el PDF",
 
   "media-viewer.loading": "Cargando",
+>>>>>>> theirs
+=======
+  "item.cite.open-modal": "Cita",
+
+  "item.cite.modal.title": "Cita",
+
+  "item.cite.modal.close": "Cerrar",
+
+  "item.cite.modal.copy": "Copiar",
+
+  // TODO New key - Add a translation
+  "item.cite.modal.error": "Error",
+
+  "modern-language-association": "MLA",
+
+  "apa": "APA",
+
+  "vancouver": "Vancouver",
+
+  "bibtex": "BibTeX",
+
+  "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
 >>>>>>> theirs
 
   "home.news.button.view-collections": "Ver Colecciones",

@@ -7325,6 +7325,7 @@
   "item.preview.organization.alternateName": "Alternative name",
 
 <<<<<<< ours
+<<<<<<< ours
   "community.no-description": "No description available",
 
   "home.news.heading.part1": "Regional Hub for",
@@ -7367,5 +7368,28 @@
   "media-viewer.pdf.download": "Download the PDF",
 
   "media-viewer.loading": "Loading",
+=======
+  "item.cite.open-modal": "Cite",
+
+  "item.cite.modal.title": "Cite",
+
+  "item.cite.modal.close": "Close",
+
+  "item.cite.modal.copy": "Copy",
+
+  // TODO New key - Add a translation
+  "item.cite.modal.error": "Error",
+
+  "modern-language-association": "MLA",
+
+  "apa": "APA",
+
+  "vancouver": "Vancouver",
+
+  "bibtex": "BibTeX",
+
+  "instituto-brasileiro-de-informacao-em-ciencia-e-tecnologia-abnt": "ABNT",
+
+>>>>>>> theirs
 }
 >>>>>>> theirs
