@@ -7324,6 +7324,7 @@
 
   "item.preview.organization.alternateName": "Nome alternativo",
 
+<<<<<<< ours
   "community.no-description": "Sem descrição disponível",
 
   "home.news.heading.part1": "Hub Regional de",
@@ -7358,3 +7359,14 @@
 
   "home.news.button.view-collections": "Ver Coleções",
 }
+=======
+  "media-viewer.pdf.files": "Arquivos",
+
+  "media-viewer.pdf.browser-not-support": "Seu navegador não é compatível com o visualizador de PDF.",
+
+  "media-viewer.pdf.download": "Baixar o PDF",
+
+  "media-viewer.loading": "Carregando",
+
+}
+>>>>>>> theirs
