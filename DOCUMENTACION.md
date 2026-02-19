@@ -4,97 +4,77 @@
 
 ### 📄 HTML Templates
 
+#### Header
+- **`src/themes/lareferencia/app/header/header.component.html`**
+  - Simplificación de estructura y clases Bootstrap
+- **`src/themes/lareferencia/app/header/header.component.scss`**
+  - Borde inferior cambiado a 6px turquesa (`#04bab8`)
+
 #### Home Page
 - **`src/themes/lareferencia/app/home-page/home-news/home-news.component.html`**
-  - Barra de búsqueda ampliada (columna 60%)
-  - Cards laterales reducidas (columna 40%)
-  - Primera card enlaza a: `https://dspace-prd.lareferencia.info/handle/123456789/1`
+  - Barra de búsqueda prominente (60% width)
+  - Cards laterales modernizadas (40% width) con enlaces institucionales
 
 #### Item Pages (Publicaciones)
 - **`src/themes/lareferencia/app/item-page/simple/item-types/publication/publication.component.html`**
-  - Widget de estadísticas `<lib-lareferencia-widget-embed [widgetType]="'lrw'">` agregado
+  - Widget de estadísticas `<lib-lareferencia-widget-embed [widgetType]="'lrw'">`
+  - Botón de citación `<ds-item-page-bibliography>` (APA, MLA, BibTeX, etc.)
 
 - **`src/themes/lareferencia/app/item-page/simple/item-types/untyped-item/untyped-item.component.html`**
-  - Widget de estadísticas agregado (igual que publication)
+  - Widget de estadísticas y botón de citación agregados
+
+- **`src/themes/lareferencia/app/item-page/media-viewer/media-viewer-pdf/`**
+  - Nuevo componente para visualización de PDFs usando Blob URLs para mayor seguridad y persistencia.
+  - Soporte para múltiples archivos PDF con selector dinámico.
 
 #### Resultados de Búsqueda
 - **`src/themes/lareferencia/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component.html`**
-  - Template customizado copiado del core
-
+  - Template customizado para resultados de búsqueda de ítems.
 - **`src/themes/lareferencia/app/shared/object-list/sidebar-search-list-element/item-types/publication/publication-sidebar-search-list-element.component.html`**
-  - Template para sidebar de búsqueda
+  - Template para sidebar de búsqueda.
 
 ### 🎨 CSS/SCSS
 
-#### Estilos de Componentes
+#### Componentes de UI
 - **`src/themes/lareferencia/app/home-page/home-news/home-news.component.scss`**
-  - `.search-form-wrapper`: Efecto glassmorphism en barra de búsqueda
-  - Input de búsqueda: altura 60px, font-size 1.2rem
-  - Cards: iconos reducidos a 45px, padding reducido
-  - Colores de marca modernizados: `#4a90e2`, `#a370f7`, `#27ae60`, `#eb5757`
+  - `.search-form-wrapper`: Efecto glassmorphism y estilos modernizados para la búsqueda.
+  - Colores de marca dinámicos: `#4a90e2`, `#a370f7`, `#27ae60`, `#eb5757`.
+- **`src/themes/lareferencia/app/header/header.component.scss`**
+  - `border-bottom: 6px solid #04bab8 !important;`.
+- **`src/themes/lareferencia/app/item-page/simple/field-components/specific-field/bibliography/`**
+  - Estilos del modal de citas y botones de copiado.
 
-#### Variables de Tema y Colores de Marca
+#### Branding y Variables
 - **`src/themes/lareferencia/styles/_theme_sass_variable_overrides.scss`**
-  - **Colores principales de LA Referencia:**
-    - `$lr-primary: #3a5180` (Azul institucional)
-    - `$lr-secondary: #04799c` (Azul/turquesa secundario)
-  - **Variables Bootstrap sobrescritas:**
-    - `$primary: #3a5180`
-    - `$secondary: #04799c`
-
+  - Colores institucionales: Primary (`#3a5180`), Secondary (`#04799c`).
 - **`src/themes/lareferencia/styles/_custom_variables.scss`**
-  - `--ds-footer-bg: #{$primary}` - Footer con color primary (#3a5180)
-  - `--ds-breadcrumb-bg: #04bab7` - Breadcrumb turquesa
-  - Header y navbar configurados con colores del tema
-
-#### Colores Modernos en Home News Component
-- **Brand 1 (Proyectos):** `#4a90e2` - Azul moderno
-- **Brand 2 (Temas):** `#a370f7` - Púrpura moderno
-- **Brand 3 (Documentación):** `#27ae60` - Verde moderno
-- **Brand 4 (Dashboard):** `#eb5757` - Rojo moderno
+  - `--ds-footer-bg: #3a5180`
+  - `--ds-breadcrumb-bg: #04bab7`
 
 ### 🔧 TypeScript Components
 
 - **`src/themes/lareferencia/app/item-page/simple/item-types/publication/publication.component.ts`**
-  - Import de `lareferenciaWidgetEmbedModule`
-  - Configurado como standalone component
+  - Integración de widgets y componente de bibliografía.
+- **`src/themes/lareferencia/app/item-page/media-viewer/media-viewer.component.ts`**
+  - Lógica para detección automática de bitstreams PDF en el visor.
+- **`src/themes/lareferencia/app/item-page/simple/field-components/specific-field/bibliography/`**
+  - `ItemPageBibliographyComponent`: Registro dinámico de i18n y manejo de citas.
+  - `ItemBibliographyService`: Servicio local al tema para consumo de API `/bibliography`.
 
-- **`src/themes/lareferencia/app/item-page/simple/item-types/untyped-item/untyped-item.component.ts`**
-  - Mismas modificaciones que publication
+### ⚙️ Configuración y Assets
 
-- **`src/themes/lareferencia/app/shared/object-list/search-result-list-element/item-search-result/item-types/item/item-search-result-list-element.component.ts`**
-  - Template y styles localizados al tema
-
-- **`src/themes/lareferencia/app/shared/object-list/sidebar-search-list-element/item-types/publication/publication-sidebar-search-list-element.component.ts`**
-  - Template localizado
-
-### ⚙️ Configuración
-
-- **`src/index.html`**
-  - Título: `<title>LA Referencia - Lyrasis</title>`
-
-- **`config/config.dev.yml`**
-  - Favicons apuntando a `assets/lareferencia/favicons/`
-
-- **`src/themes/lareferencia/assets/data/widget.config.json`**
-  - Configuración de widgets lrw y lrhw
-
-- **`src/themes/lareferencia/assets/favicons/manifest.webmanifest`**
-  - Web manifest con nombre y colores del tema
-
-### 📦 Dependencias
-
-- **`package.json`**
-  - `lareferencia-widget-embed: ^1.1.5`
+- **`src/index.html`** y **`config/config.dev.yml`**
+  - Título institucional y favicons configurados.
+- **`src/assets/i18n/`**
+  - Traducciones del botón de citar manejadas programáticamente para aislamiento total del tema.
 
 ---
 
 ## Resumen de Cambios
 
-1. ✅ Widget de estadísticas integrado en páginas de ítems
-2. ✅ Home page rediseñada con barra de búsqueda prominente
-3. ✅ Cards laterales reducidas y modernizadas
-4. ✅ Favicon y título configurados para LA Referencia - Lyrasis
-5. ✅ Templates de búsqueda customizados
-
-**Documentación completa:** [`TUTORIAL.MD`](file:///home/juan-manitta/Escritorio/Trabajo/LA_Referencia/Lyrasis/dspace-angular/TUTORIAL.MD)
+1. ✅ **Widget de Estadísticas**: Integrado en todas las páginas de ítems.
+2. ✅ **Visor de PDF Moderno**: SOP con Blob URLs y soporte para múltiples archivos.
+3. ✅ **Citas Bibliográficas**: Modal con formatos APA, BibTeX, etc., disponible en ítems.
+4. ✅ **Home Page Rediseñada**: Búsqueda prominente y estética glassmorphism.
+5. ✅ **Header & Branding**: Colores institucionales aplicados consistentemente.
+6. ✅ **Zero Core Changes**: Todas las funcionalidades operan exclusivamente desde el tema lareferencia.
