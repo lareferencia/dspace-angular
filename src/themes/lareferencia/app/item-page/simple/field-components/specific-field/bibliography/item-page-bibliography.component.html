@@ -1,0 +1,57 @@
+<!-- Cite link -->
+<a class="btn btn-sm btn-outline-secondary cite-link mb-4" role="button" (click)="openModal()" tabindex="0">
+  <i class="fas fa-quote-left me-1"></i>
+  {{ 'item.cite.open-modal' | translate }}
+</a>
+
+<!-- Citation modal -->
+<ng-template #bibliographyModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">{{ 'item.cite.modal-title' | translate }}</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+  </div>
+  <div class="modal-body">
+
+    <!-- Loading state -->
+    <div *ngIf="isLoading" class="text-center py-4">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">{{ 'item.cite.loading' | translate }}</span>
+      </div>
+      <p class="mt-2 text-muted">{{ 'item.cite.loading' | translate }}</p>
+    </div>
+
+    <!-- Error state -->
+    <div *ngIf="hasError && !isLoading" class="alert alert-warning" role="alert">
+      <i class="fas fa-exclamation-triangle me-2"></i>
+      {{ 'item.cite.error' | translate }}
+    </div>
+
+    <!-- Bibliography entries -->
+    <div *ngIf="!isLoading && !hasError && bibliographies.length > 0">
+      <div *ngFor="let bib of bibliographies; let i = index" class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <strong class="text-uppercase small text-muted">{{ bib.style }}</strong>
+          <button class="btn btn-sm btn-outline-secondary" (click)="copyToClipboard(bib.value, i)">
+            <i class="fas" [ngClass]="copiedIndex === i ? 'fa-check' : 'fa-copy'"></i>
+            {{ (copiedIndex === i ? 'item.cite.copied' : 'item.cite.copy') | translate }}
+          </button>
+        </div>
+        <!-- BibTeX: use pre/code for monospace -->
+        <pre *ngIf="isBibtex(bib.style)" class="bg-light p-3 rounded border"><code>{{ bib.value }}</code></pre>
+        <!-- Other styles: regular formatted text -->
+        <div *ngIf="!isBibtex(bib.style)" class="bg-light p-3 rounded border" [innerHTML]="bib.value"></div>
+      </div>
+    </div>
+
+    <!-- No results -->
+    <div *ngIf="!isLoading && !hasError && bibliographies.length === 0" class="text-center text-muted py-3">
+      {{ 'item.cite.no-results' | translate }}
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close()">
+      {{ 'item.cite.close' | translate }}
+    </button>
+  </div>
+</ng-template>

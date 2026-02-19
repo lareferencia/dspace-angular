@@ -38,6 +38,7 @@ import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/the
 import { getFirstSucceededRemoteDataPayload } from '../../../../../../../app/core/shared/operators';
 
 import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
+import { ItemPageBibliographyComponent } from '../../field-components/specific-field/bibliography/item-page-bibliography.component';
 
 @listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'lareferencia')
 @Component({
@@ -53,6 +54,7 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
     GenericItemPageFieldComponent,
     GeospatialItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageBibliographyComponent,
     ItemPageDateFieldComponent,
     ItemPageUriFieldComponent,
     MetadataFieldWrapperComponent,

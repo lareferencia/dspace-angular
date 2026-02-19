@@ -34,6 +34,7 @@ import { ThemedResultsBackButtonComponent } from '../../../../../../../app/share
 import { ThemedThumbnailComponent } from '../../../../../../../app/thumbnail/themed-thumbnail.component';
 
 import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
+import { ItemPageBibliographyComponent } from '../../field-components/specific-field/bibliography/item-page-bibliography.component';
 
 @listableObjectComponent(Item, ViewMode.StandalonePage, Context.Any, 'lareferencia')
 @Component({
@@ -53,6 +54,7 @@ import { lareferenciaWidgetEmbedModule } from 'lareferencia-widget-embed';
     GenericItemPageFieldComponent,
     GeospatialItemPageFieldComponent,
     ItemPageAbstractFieldComponent,
+    ItemPageBibliographyComponent,
     ItemPageCcLicenseFieldComponent,
     ItemPageDateFieldComponent,
     ItemPageUriFieldComponent,
