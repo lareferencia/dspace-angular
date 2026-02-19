@@ -3,7 +3,7 @@ import { i18nBreadcrumbResolver } from '@dspace/core/breadcrumbs/i18n-breadcrumb
 
 import { FilteredCollectionsComponent } from './filtered-collections/filtered-collections.component';
 import { FilteredItemsComponent } from './filtered-items/filtered-items.component';
-import { UserActivityReportComponent } from './user-activity/user-activity-report.component';
+import { UserActivityReportComponent } from './users-activity/users-activity-report.component';
 
 export const ROUTES: Route[] = [
   {
@@ -29,9 +29,9 @@ export const ROUTES: Route[] = [
     ],
   },
     {
-      path: 'user-activity',
+      path: 'users-activity',
       resolve: { breadcrumb: i18nBreadcrumbResolver },
-      data: { title: 'admin.reports.user-activity.title', breadcrumbKey: 'admin.reports.user-activity' },
+      data: { title: 'admin.reports.users-activity.title', breadcrumbKey: 'admin.reports.users-activity' },
       children: [
         {
           path: '',

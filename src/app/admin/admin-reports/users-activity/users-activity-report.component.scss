@@ -1,4 +1,4 @@
-.user-activity-report-container {
+.users-activity-report-container {
   padding: 20px;
   background-color: #f8f9fa;
   min-height: 100vh;
@@ -204,7 +204,7 @@
 
 // Responsive Design
 @media (max-width: 768px) {
-  .user-activity-report-container {
+  .users-activity-report-container {
     padding: 10px;
 
     .summary-stats {

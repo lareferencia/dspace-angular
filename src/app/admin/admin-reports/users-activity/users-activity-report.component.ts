@@ -7,14 +7,14 @@ import ApexCharts, { ApexOptions } from 'apexcharts';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { ReportSummary, SummaryWithTrendData, UserAction, UserActivityReport, UserActivityReportService, UserActivityStats } from './user-activity-report.service';
+import { ReportSummary, SummaryWithTrendData, UserAction, UserActivityReport, UserActivityReportService, UserActivityStats } from './users-activity-report.service';
 
 @Component({
-  selector: 'ds-user-activity-report',
+  selector: 'ds-users-activity-report',
   standalone: true,
   imports: [CommonModule, FormsModule, TranslateModule, NgbModule],
-  templateUrl: './user-activity-report.component.html',
-  styleUrls: ['./user-activity-report.component.scss']
+  templateUrl: './users-activity-report.component.html',
+  styleUrls: ['./users-activity-report.component.scss']
 })
 export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('trendChartContainer') chartContainer?: ElementRef<HTMLDivElement>;
@@ -362,7 +362,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
   }
 
   private getUserChartTitle(metric: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals'): string {
-    return this.translate.instant(`admin.reports.user-activity.top-10-${metric}`);
+    return this.translate.instant(`admin.reports.users-activity.top-10-${metric}`);
   }
 
   private getTopUsersBy(metric: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals') {
@@ -413,6 +413,14 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
 
     const categories = data.map(item => item.name);
     const series = [{ name: title, data: data.map(item => item.value) }];
+
+    const titleText = this.viewType === 'yearly'
+      ? this.translate.instant('admin.reports.users-activity.yearly')
+      : this.translate.instant('admin.reports.users-activity.monthly');
+    const xAxisTitle = this.viewType === 'yearly'
+      ? this.translate.instant('admin.reports.users-activity.year')
+      : this.translate.instant('admin.reports.users-activity.month');
+    const yAxisTitle = this.translate.instant('admin.reports.users-activity.count');
 
     const options: ApexOptions = {
       chart: {
@@ -661,6 +669,13 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     const series: any[] = [];
     const actionTypes = ['SUBMITTED', 'APPROVED', 'REJECTED', 'WITHDRAWN'];
 
+    const legendLabels: { [key: string]: string } = {
+      SUBMITTED: this.translate.instant('admin.reports.users-activity.submitted'),
+      APPROVED: this.translate.instant('admin.reports.users-activity.approved'),
+      REJECTED: this.translate.instant('admin.reports.users-activity.rejected'),
+      WITHDRAWN: this.translate.instant('admin.reports.users-activity.withdrawn')
+    };
+
     for (const actionType of actionTypes) {
       const data = periods.map(period => {
         const periodData = dataToUse[period] || {};
@@ -668,14 +683,15 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
       });
 
       series.push({
-        name: actionType.charAt(0).toUpperCase() + actionType.slice(1).toLowerCase(),
+        name: legendLabels[actionType] || actionType,
         data: data,
         color: colors[actionType]
       });
     }
 
-    // Render chart after a small delay to ensure DOM is ready
-    setTimeout(() => {
+    // Trigger change detection and render chart
+    // Use Promise.resolve() to defer to the next microtask to ensure DOM is ready
+    Promise.resolve().then(() => {
       this.cdr.detectChanges();
       if (this.chartContainer) {
         this.renderChart(periods, series);
@@ -683,7 +699,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
         // If container not available yet, store pending data
         this.pendingChartData = { periods, series };
       }
-    }, 100);
+    });
   }
 
   /**
@@ -698,7 +714,20 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     // Destroy previous chart if it exists
     if (this.chartInstance) {
       this.chartInstance.destroy();
+      this.chartInstance = null;
     }
+
+    // Clear the container
+    const container = this.chartContainer.nativeElement;
+    container.innerHTML = '';
+
+    const titleText = this.viewType === 'yearly'
+      ? this.translate.instant('admin.reports.users-activity.yearly')
+      : this.translate.instant('admin.reports.users-activity.monthly');
+    const xAxisTitle = this.viewType === 'yearly'
+      ? this.translate.instant('admin.reports.users-activity.year')
+      : this.translate.instant('admin.reports.users-activity.month');
+    const yAxisTitle = this.translate.instant('admin.reports.users-activity.count');
 
     const options: ApexOptions = {
       chart: {
@@ -718,19 +747,19 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
         }
       },
       title: {
-        text: this.viewType === 'yearly' ? 'Yearly Submissions Report' : 'Monthly Submissions Report'
+        text: titleText
       },
       series: series,
       xaxis: {
         categories: periods,
         type: 'category',
         title: {
-          text: this.viewType === 'yearly' ? 'Year' : 'Month'
+          text: xAxisTitle
         }
       },
       yaxis: {
         title: {
-          text: 'Count'
+          text: yAxisTitle
         },
         min: 0
       },
@@ -760,7 +789,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     };
 
     try {
-      this.chartInstance = new ApexCharts(this.chartContainer.nativeElement, options);
+      this.chartInstance = new ApexCharts(container, options);
       this.chartInstance.render();
     } catch (error) {
       console.error('Error rendering chart:', error);
@@ -793,7 +822,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     const url = URL.createObjectURL(blob);
 
     link.setAttribute('href', url);
-    link.setAttribute('download', `user-activity-report-${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `users-activity-report-${new Date().toISOString().split('T')[0]}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();

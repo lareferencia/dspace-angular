@@ -749,105 +749,110 @@
 
   "admin.reports.commons.filters.permission.has_restricted_metadata.tooltip": "Item has metadata that is not accessible to Anonymous user",
 
-  "admin.reports.user-activity.title": "User Activity Report",
+  "admin.reports.users-activity.title": "Users Activity Report",
 
-  "admin.reports.user-activity.breadcrumbs": "User Activity Report",
+  "admin.reports.users-activity.breadcrumbs": "Users Activity Report",
 
-  "admin.reports.user-activity.description": "View detailed statistics about user activity across submissions and reviews",
+  "admin.reports.users-activity.description": "View detailed statistics about users' activity across submissions and reviews",
 
-  "admin.reports.user-activity.summary": "Summary",
+  "admin.reports.users-activity.summary": "Summary",
 
-  "admin.reports.user-activity.user-stats": "User Statistics",
+  "admin.reports.users-activity.user-stats": "Users Statistics",
 
-   "admin.reports.user-activity.users-indicators": "User Indicators",
+  "admin.reports.users-activity.users-indicators": "Users Indicators",
 
-  "admin.reports.user-activity.actions": "All Actions",
+  "admin.reports.users-activity.actions": "All Actions",
 
-  "admin.reports.user-activity.total-users": "Total Users",
+  "admin.reports.users-activity.total-users": "Total Users",
 
-  "admin.reports.user-activity.total-submissions": "Total Submissions",
+  "admin.reports.users-activity.total-submissions": "Total Submissions",
 
-  "admin.reports.user-activity.total-reviews": "Total Reviews",
+  "admin.reports.users-activity.total-reviews": "Total Reviews",
 
-  "admin.reports.user-activity.total-approvals": "Total Approvals",
+  "admin.reports.users-activity.total-approvals": "Total Approvals",
 
-  "admin.reports.user-activity.total-rejections": "Total Rejections",
+  "admin.reports.users-activity.total-rejections": "Total Rejections",
 
-  "admin.reports.user-activity.total-withdrawals": "Total Withdrawals",
+  "admin.reports.users-activity.total-withdrawals": "Total Withdrawals",
 
-  "admin.reports.user-activity.report-summary": "Report Summary",
+  "admin.reports.users-activity.report-summary": "Report Summary",
 
-  "admin.reports.user-activity.user-statistics": "User Statistics",
+  "admin.reports.users-activity.user-statistics": "Users Statistics",
 
-  "admin.reports.user-activity.all-actions": "All Actions",
+  "admin.reports.users-activity.all-actions": "All Actions",
 
-  "admin.reports.user-activity.download-CSV": "Download CSV",
+  "admin.reports.users-activity.download-CSV": "Download CSV",
 
-  "admin.reports.user-activity.name": "Name",
+  "admin.reports.users-activity.name": "Name",
 
-  "admin.reports.user-activity.email": "Email",
+  "admin.reports.users-activity.email": "Email",
 
-  "admin.reports.user-activity.submissions": "Submissions",
+  "admin.reports.users-activity.submissions": "Submissions",
 
-  "admin.reports.user-activity.reviews": "Reviews",
+  "admin.reports.users-activity.reviews": "Reviews",
 
-  "admin.reports.user-activity.approvals": "Approvals",
+  "admin.reports.users-activity.approvals": "Approvals",
 
-  "admin.reports.user-activity.rejections": "Rejections",
+  "admin.reports.users-activity.rejections": "Rejections",
 
-  "admin.reports.user-activity.withdrawals": "Withdrawals",
+  "admin.reports.users-activity.withdrawals": "Withdrawals",
 
-  "admin.reports.user-activity.searchByEmailOrName": "Search by email or name...",
+  "admin.reports.users-activity.searchByEmailOrName": "Search by email or name...",
 
-  "admin.reports.user-activity.action": "Action",
+  "admin.reports.users-activity.action": "Action",
 
-  "admin.reports.user-activity.user": "User",
+  "admin.reports.users-activity.user": "User",
 
-  "admin.reports.user-activity.date": "Date",
+  "admin.reports.users-activity.date": "Date",
 
-  "admin.reports.user-activity.details": "Details",
+  "admin.reports.users-activity.details": "Details",
 
-  "admin.reports.user-activity.submitted": "Submitted",
+  "admin.reports.users-activity.submitted": "Submitted",
 
-  "admin.reports.user-activity.reviewed": "Reviewed",
+  "admin.reports.users-activity.reviewed": "Reviewed",
 
-  "admin.reports.user-activity.approved": "Approved",
+  "admin.reports.users-activity.approved": "Approved",
 
-  "admin.reports.user-activity.rejected": "Rejected",
+  "admin.reports.users-activity.rejected": "Rejected",
 
-  "admin.reports.user-activity.withdrawn": "Withdrawn",
+  "admin.reports.users-activity.withdrawn": "Withdrawn",
 
-  "admin.reports.user-activity.no-results": "No results found",
+  "admin.reports.users-activity.no-results": "No results found",
 
-  "admin.reports.user-activity.activity-trends": "Activity Trends by Month",
+  "admin.reports.users-activity.activity-trends": "Activity Trends by Month",
 
-  "admin.reports.user-activity.start-date": "Start Date (YYYY-MM)",
+  "admin.reports.users-activity.start-date": "Start Date (YYYY-MM)",
 
-  "admin.reports.user-activity.end-date": "End Date (YYYY-MM)",
+  "admin.reports.users-activity.end-date": "End Date (YYYY-MM)",
 
-  "admin.reports.user-activity.reset-filter": "Reset Filter",
+  "admin.reports.users-activity.reset-filter": "Reset Filter",
 
-  "admin.reports.user-activity.monthly": "Monthly",
+  "admin.reports.users-activity.monthly": "Monthly",
 
-  "admin.reports.user-activity.yearly": "Yearly",
+  "admin.reports.users-activity.year": "Year",
 
-  "admin.reports.user-activity.top-10-submissions": "Top 10 Users by Submissions",
+  "admin.reports.users-activity.yearly": "Yearly",
 
-  "admin.reports.user-activity.top-10-reviews": "Top 10 Users by Reviews",
+  "admin.reports.users-activity.count": "Count",
+  "admin.reports.users-activity.month": "Month",
 
-  "admin.reports.user-activity.top-10-approvals": "Top 10 Users by Approvals",
+  "admin.reports.users-activity.top-10-submissions": "Top 10 Users by Submissions",
 
-  "admin.reports.user-activity.top-10-rejections": "Top 10 Users by Rejections",
+  "admin.reports.users-activity.top-10-reviews": "Top 10 Users by Reviews",
 
-  "admin.reports.user-activity.top-10-withdrawals": "Top 10 Users by Withdrawals",
+  "admin.reports.users-activity.top-10-approvals": "Top 10 Users by Approvals",
 
-  "admin.reports.user-activity.download-csv": "Download CSV",
+  "admin.reports.users-activity.top-10-rejections": "Top 10 Users by Rejections",
 
-  "admin.reports.user-activity.search-by-email-or-name": "Search by email or name...",
+  "admin.reports.users-activity.top-10-withdrawals": "Top 10 Users by Withdrawals",
 
-  "admin.reports.user-activity.no-trend-data": "No trend data available for selected period",
+  "admin.reports.users-activity.download-csv": "Download CSV",
 
-  "admin.reports.user-activity.user-stats": "User Statistics",
+  "admin.reports.users-activity.search-by-email-or-name": "Search by email or name...",
+
+  "admin.reports.users-activity.no-trend-data": "No trend data available for selected period",
+
+  "admin.reports.users-activity.user-stats": "Users Statistics",
 
   "admin.search.breadcrumbs": "Administrative Search",
 
@@ -3615,7 +3620,7 @@
 
   "menu.section.reports.queries": "Metadata Query",
 
-  "menu.section.reports.user-activity": "User Activity Report",
+  "menu.section.reports.users-activity": "Users Activity Report",
 
   "menu.section.admin_search": "Admin Search",
 

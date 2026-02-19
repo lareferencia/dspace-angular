@@ -1,8 +1,8 @@
-<div class="user-activity-report-container">
+<div class="users-activity-report-container">
   <div class="page-header">
-    <h1>{{ "admin.reports.user-activity.title" | translate }}</h1>
+    <h1>{{ "admin.reports.users-activity.title" | translate }}</h1>
     <p class="text-muted">
-      {{ "admin.reports.user-activity.description" | translate }}
+      {{ "admin.reports.users-activity.description" | translate }}
     </p>
   </div>
 
@@ -31,7 +31,7 @@
             (click)="setTab('summary')"
             type="button"
           >
-            {{ "admin.reports.user-activity.summary" | translate }}
+            {{ "admin.reports.users-activity.summary" | translate }}
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -41,7 +41,7 @@
             (click)="setTab('users')"
             type="button"
           >
-            {{ "admin.reports.user-activity.user-stats" | translate }}
+            {{ "admin.reports.users-activity.user-stats" | translate }}
           </button>
         </li>
         <li class="nav-item" role="presentation">
@@ -51,7 +51,7 @@
             (click)="setTab('actions')"
             type="button"
           >
-            {{ "admin.reports.user-activity.actions" | translate }}
+            {{ "admin.reports.users-activity.actions" | translate }}
           </button>
         </li>
       </ul>
@@ -63,7 +63,7 @@
           <div class="tab-pane active">
             <div class="summary-tab">
               <h4>
-                {{ "admin.reports.user-activity.report-summary" | translate }}
+                {{ "admin.reports.users-activity.report-summary" | translate }}
               </h4>
 
               <!-- Loading State -->
@@ -88,7 +88,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-users"
+                                  "admin.reports.users-activity.total-users"
                                     | translate
                                 }}
                               </div>
@@ -101,7 +101,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-submissions"
+                                  "admin.reports.users-activity.total-submissions"
                                     | translate
                                 }}
                               </div>
@@ -114,7 +114,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-reviews"
+                                  "admin.reports.users-activity.total-reviews"
                                     | translate
                                 }}
                               </div>
@@ -127,7 +127,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-approvals"
+                                  "admin.reports.users-activity.total-approvals"
                                     | translate
                                 }}
                               </div>
@@ -140,7 +140,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-rejections"
+                                  "admin.reports.users-activity.total-rejections"
                                     | translate
                                 }}
                               </div>
@@ -153,7 +153,7 @@
                             <div class="stat-card">
                               <div class="stat-label">
                                 {{
-                                  "admin.reports.user-activity.total-withdrawals"
+                                  "admin.reports.users-activity.total-withdrawals"
                                     | translate
                                 }}
                               </div>
@@ -172,7 +172,7 @@
                 <div class="trend-section mt-5">
                   <h5 class="mb-3">
                     {{
-                      "admin.reports.user-activity.activity-trends" | translate
+                      "admin.reports.users-activity.activity-trends" | translate
                     }}
                   </h5>
 
@@ -187,7 +187,7 @@
                           (click)="switchViewType('monthly')"
                         >
                           {{
-                            "admin.reports.user-activity.monthly" | translate
+                            "admin.reports.users-activity.monthly" | translate
                           }}
                         </button>
                         <button
@@ -196,7 +196,9 @@
                           [class.active]="viewType === 'yearly'"
                           (click)="switchViewType('yearly')"
                         >
-                          {{ "admin.reports.user-activity.yearly" | translate }}
+                          {{
+                            "admin.reports.users-activity.yearly" | translate
+                          }}
                         </button>
                       </div>
                     </div>
@@ -208,7 +210,8 @@
                       <div class="col-md-3">
                         <label for="startDate" class="form-label">
                           {{
-                            "admin.reports.user-activity.start-date" | translate
+                            "admin.reports.users-activity.start-date"
+                              | translate
                           }}
                         </label>
                         <input
@@ -222,7 +225,7 @@
                       <div class="col-md-3">
                         <label for="endDate" class="form-label">
                           {{
-                            "admin.reports.user-activity.end-date" | translate
+                            "admin.reports.users-activity.end-date" | translate
                           }}
                         </label>
                         <input
@@ -240,7 +243,7 @@
                           (click)="resetDateFilter()"
                         >
                           {{
-                            "admin.reports.user-activity.reset-filter"
+                            "admin.reports.users-activity.reset-filter"
                               | translate
                           }}
                         </button>
@@ -271,7 +274,7 @@
           <div class="tab-pane active">
             <div class="users-tab">
               <h4>
-                {{ "admin.reports.user-activity.user-statistics" | translate }}
+                {{ "admin.reports.users-activity.user-statistics" | translate }}
               </h4>
 
               <!-- Loading State -->
@@ -294,7 +297,7 @@
                         type="text"
                         class="form-control"
                         placeholder="{{
-                          'admin.reports.user-activity.search-by-email-or-name'
+                          'admin.reports.users-activity.search-by-email-or-name'
                             | translate
                         }}"
                         [(ngModel)]="searchEmail"
@@ -308,7 +311,8 @@
                       >
                         <i class="bi bi-download"></i>
                         {{
-                          "admin.reports.user-activity.download-csv" | translate
+                          "admin.reports.users-activity.download-csv"
+                            | translate
                         }}
                       </button>
                     </div>
@@ -326,7 +330,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.name" | translate
+                                "admin.reports.users-activity.name" | translate
                               }}
                               @if (sortField === "name") {
                                 <span class="sort-icon">
@@ -337,7 +341,7 @@
                           </th>
                           <th>
                             {{
-                              "admin.reports.user-activity.email" | translate
+                              "admin.reports.users-activity.email" | translate
                             }}
                           </th>
                           <th>
@@ -347,7 +351,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.submissions"
+                                "admin.reports.users-activity.submissions"
                                   | translate
                               }}
                               @if (sortField === "submissions") {
@@ -364,7 +368,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.reviews"
+                                "admin.reports.users-activity.reviews"
                                   | translate
                               }}
                               @if (sortField === "reviews") {
@@ -381,7 +385,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.approvals"
+                                "admin.reports.users-activity.approvals"
                                   | translate
                               }}
                               @if (sortField === "approvals") {
@@ -398,7 +402,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.rejections"
+                                "admin.reports.users-activity.rejections"
                                   | translate
                               }}
                               @if (sortField === "rejections") {
@@ -415,7 +419,7 @@
                               class="sort-link"
                             >
                               {{
-                                "admin.reports.user-activity.withdrawals"
+                                "admin.reports.users-activity.withdrawals"
                                   | translate
                               }}
                               @if (sortField === "withdrawals") {
@@ -465,7 +469,7 @@
                           <tr>
                             <td colspan="7" class="text-center text-muted">
                               {{
-                                "admin.reports.user-activity.noResults"
+                                "admin.reports.users-activity.noResults"
                                   | translate
                               }}
                             </td>
@@ -489,7 +493,8 @@
                   }
                   <h5>
                     {{
-                      "admin.reports.user-activity.users-indicators" | translate
+                      "admin.reports.users-activity.users-indicators"
+                        | translate
                     }}
                   </h5>
                   <div class="row g-3 mb-4">
@@ -555,7 +560,7 @@
           <div class="tab-pane active">
             <div class="actions-tab">
               <h4>
-                {{ "admin.reports.user-activity.all-actions" | translate }}
+                {{ "admin.reports.users-activity.all-actions" | translate }}
               </h4>
 
               <!-- Loading State -->
@@ -575,20 +580,22 @@
                     <thead class="table-header-bg">
                       <tr>
                         <th>
-                          {{ "admin.reports.user-activity.action" | translate }}
+                          {{
+                            "admin.reports.users-activity.action" | translate
+                          }}
                         </th>
                         <th>
-                          {{ "admin.reports.user-activity.user" | translate }}
+                          {{ "admin.reports.users-activity.user" | translate }}
                         </th>
                         <th>
-                          {{ "admin.reports.user-activity.email" | translate }}
+                          {{ "admin.reports.users-activity.email" | translate }}
                         </th>
                         <th>
-                          {{ "admin.reports.user-activity.date" | translate }}
+                          {{ "admin.reports.users-activity.date" | translate }}
                         </th>
                         <th>
                           {{
-                            "admin.reports.user-activity.details" | translate
+                            "admin.reports.users-activity.details" | translate
                           }}
                         </th>
                       </tr>
@@ -603,7 +610,7 @@
                             @if (action.actionType === "SUBMITTED") {
                               <span class="badge bg-primary">
                                 {{
-                                  "admin.reports.user-activity.submitted"
+                                  "admin.reports.users-activity.submitted"
                                     | translate
                                 }}
                               </span>
@@ -611,7 +618,7 @@
                             @if (action.actionType === "REVIEWED") {
                               <span class="badge bg-info">
                                 {{
-                                  "admin.reports.user-activity.reviewed"
+                                  "admin.reports.users-activity.reviewed"
                                     | translate
                                 }}
                               </span>
@@ -619,7 +626,7 @@
                             @if (action.actionType === "APPROVED") {
                               <span class="badge bg-success">
                                 {{
-                                  "admin.reports.user-activity.approved"
+                                  "admin.reports.users-activity.approved"
                                     | translate
                                 }}
                               </span>
@@ -627,7 +634,7 @@
                             @if (action.actionType === "REJECTED") {
                               <span class="badge bg-danger">
                                 {{
-                                  "admin.reports.user-activity.rejected"
+                                  "admin.reports.users-activity.rejected"
                                     | translate
                                 }}
                               </span>
@@ -635,7 +642,7 @@
                             @if (action.actionType === "WITHDRAWN") {
                               <span class="badge bg-warning text-dark">
                                 {{
-                                  "admin.reports.user-activity.withdrawn"
+                                  "admin.reports.users-activity.withdrawn"
                                     | translate
                                 }}
                               </span>
@@ -651,7 +658,7 @@
                         <tr>
                           <td colspan="5" class="text-center text-muted">
                             {{
-                              "admin.reports.user-activity.noResults"
+                              "admin.reports.users-activity.noResults"
                                 | translate
                             }}
                           </td>

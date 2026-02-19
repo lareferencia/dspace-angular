@@ -1,19 +1,19 @@
-# DSpace Angular User Activity Report Page - Summary
+# DSpace Angular Users Activity Report Page - Summary
 
 ## ✅ Implementation Complete
 
-A fully functional Angular page has been created to display the user activity reporting data in the DSpace admin interface.
+A fully functional Angular page has been created to display the users activity reporting data in the DSpace admin interface.
 
 ## 📁 Files Created
 
 ### Component Files
 
 ```
-src/app/admin/admin-reports/user-activity/
-├── user-activity-report.component.ts      (154 lines)
-├── user-activity-report.component.html    (148 lines)
-├── user-activity-report.component.scss    (218 lines)
-├── user-activity-report.service.ts        (69 lines)
+src/app/admin/admin-reports/users-activity/
+├── users-activity-report.component.ts      (154 lines)
+├── users-activity-report.component.html    (148 lines)
+├── users-activity-report.component.scss    (218 lines)
+├── users-activity-report.service.ts        (69 lines)
 └── README.md                                  (Comprehensive guide)
 ```
 
@@ -28,7 +28,7 @@ src/app/admin/admin-reports/
 
 ```
 src/assets/i18n/
-└── user-activity-report.en.json           (i18n translations)
+└── users-activity-report.en.json           (i18n translations)
 ```
 
 ## 🎨 User Interface Features
@@ -149,7 +149,7 @@ All calls require ADMIN authority (handled by backend).
 ### 1. Copy Files
 
 ```bash
-cp -r user-activity/ src/app/admin/admin-reports/
+cp -r users-activity/ src/app/admin/admin-reports/
 ```
 
 ### 2. Verify Routing
@@ -158,7 +158,7 @@ Check that `admin-reports-routes.ts` includes the new route:
 
 ```typescript
 {
-  path: 'user-activity',
+  path: 'users-activity',
   component: UserActivityReportComponent
 }
 ```
@@ -177,7 +177,7 @@ Copy built files to your DSpace UI directory
 
 ### 5. Verify
 
-- Navigate to `/admin/reports/user-activity`
+- Navigate to `/admin/reports/users-activity`
 - Confirm data displays correctly
 - Test search, sort, and export features
 
@@ -230,17 +230,17 @@ Reviewed | Jesiel Viana       | viana@example.com  | 01/06/2026 | Approved...
 ### Supported Keys
 
 ```json
-admin.reports.user-activity.title
-admin.reports.user-activity.summary
-admin.reports.user-activity.totalUsers
-admin.reports.user-activity.totalSubmissions
-admin.reports.user-activity.totalReviews
-admin.reports.user-activity.name
-admin.reports.user-activity.email
-admin.reports.user-activity.submissions
-admin.reports.user-activity.reviews
-admin.reports.user-activity.submitted
-admin.reports.user-activity.reviewed
+admin.reports.users-activity.title
+admin.reports.users-activity.summary
+admin.reports.users-activity.totalUsers
+admin.reports.users-activity.totalSubmissions
+admin.reports.users-activity.totalReviews
+admin.reports.users-activity.name
+admin.reports.users-activity.email
+admin.reports.users-activity.submissions
+admin.reports.users-activity.reviews
+admin.reports.users-activity.submitted
+admin.reports.users-activity.reviewed
 ...
 ```
 
@@ -248,9 +248,9 @@ admin.reports.user-activity.reviewed
 
 Create new translation files:
 
-- `user-activity-report.es.json`
-- `user-activity-report.fr.json`
-- `user-activity-report.de.json`
+- `users-activity-report.es.json`
+- `users-activity-report.fr.json`
+- `users-activity-report.de.json`
 
 ## 🧪 Testing Recommendations
 
@@ -280,7 +280,7 @@ Create new translation files:
 ### In Another Component
 
 ```typescript
-import { UserActivityReportService } from './user-activity-report.service';
+import { UserActivityReportService } from './users-activity-report.service';
 
 constructor(private reportService: UserActivityReportService) {}
 
