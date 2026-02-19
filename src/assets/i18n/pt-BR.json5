@@ -1166,6 +1166,9 @@
   // "admin.reports.user-activity.user-statistics": "User Statistics",
   "admin.reports.user-activity.user-statistics": "Estatísticas do Usuário",
 
+  // "admin.reports.user-activity.user-statistics": "Users indicators",
+  "admin.reports.user-activity.users-indicators": "Indicadores de Usuários",
+
   // "admin.reports.user-activity.all-actions": "All Actions",
   "admin.reports.user-activity.all-actions": "Todas as Ações",
 
@@ -1237,6 +1240,27 @@
 
   // "admin.reports.user-activity.reset-filter": "Reset Filter",
   "admin.reports.user-activity.reset-filter": "Redefinir Filtro",
+
+  // "admin.reports.user-activity.monthly": "Monthly",
+  "admin.reports.user-activity.monthly": "Mensal",
+
+  // "admin.reports.user-activity.yearly": "Yearly",
+  "admin.reports.user-activity.yearly": "Anual",
+
+  // "admin.reports.user-activity.top-10-submissions": "Top 10 Users by Submissions",
+  "admin.reports.user-activity.top-10-submissions": "Top 10 usuários por submissões",
+
+  // "admin.reports.user-activity.top-10-reviews": "Top 10 Users by Reviews",
+  "admin.reports.user-activity.top-10-reviews": "Top 10 usuários por revisões",
+
+  // "admin.reports.user-activity.top-10-approvals": "Top 10 Users by Approvals",
+  "admin.reports.user-activity.top-10-approvals": "Top 10 usuários por aprovações",
+
+  // "admin.reports.user-activity.top-10-rejections": "Top 10 Users by Rejections",
+  "admin.reports.user-activity.top-10-rejections": "Top 10 usuários por rejeições",
+
+  // "admin.reports.user-activity.top-10-withdrawals": "Top 10 Users by Withdrawals",
+  "admin.reports.user-activity.top-10-withdrawals": "Top 10 usuários por retiradas",
 
   // "admin.reports.user-activity.download-csv": "Download CSV",
   "admin.reports.user-activity.download-csv": "Baixar CSV",

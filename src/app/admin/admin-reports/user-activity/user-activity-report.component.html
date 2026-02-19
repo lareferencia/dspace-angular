@@ -176,53 +176,90 @@
                     }}
                   </h5>
 
-                  <!-- Date Filter Controls -->
+                  <!-- View Type Toggle -->
                   <div class="row mb-3">
-                    <div class="col-md-3">
-                      <label for="startDate" class="form-label">
-                        {{
-                          "admin.reports.user-activity.start-date" | translate
-                        }}
-                      </label>
-                      <input
-                        type="month"
-                        id="startDate"
-                        class="form-control"
-                        [(ngModel)]="startDate"
-                        (change)="onDateFilterChange()"
-                      />
-                    </div>
-                    <div class="col-md-3">
-                      <label for="endDate" class="form-label">
-                        {{ "admin.reports.user-activity.end-date" | translate }}
-                      </label>
-                      <input
-                        type="month"
-                        id="endDate"
-                        class="form-control"
-                        [(ngModel)]="endDate"
-                        (change)="onDateFilterChange()"
-                      />
-                    </div>
-                    <div class="col-md-6 d-flex align-items-end">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        (click)="resetDateFilter()"
-                      >
-                        {{
-                          "admin.reports.user-activity.reset-filter" | translate
-                        }}
-                      </button>
+                    <div class="col-md-12">
+                      <div class="btn-group" role="group">
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary"
+                          [class.active]="viewType === 'monthly'"
+                          (click)="switchViewType('monthly')"
+                        >
+                          {{
+                            "admin.reports.user-activity.monthly" | translate
+                          }}
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-outline-primary"
+                          [class.active]="viewType === 'yearly'"
+                          (click)="switchViewType('yearly')"
+                        >
+                          {{ "admin.reports.user-activity.yearly" | translate }}
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  <!-- Line Chart -->
-                  <div
-                    #trendChartContainer
-                    class="chart-container"
-                    style="width: 100%"
-                  ></div>
+                  <!-- Date Filter Controls - Only show in monthly view -->
+                  @if (viewType === "monthly") {
+                    <div class="row mb-3">
+                      <div class="col-md-3">
+                        <label for="startDate" class="form-label">
+                          {{
+                            "admin.reports.user-activity.start-date" | translate
+                          }}
+                        </label>
+                        <input
+                          type="month"
+                          id="startDate"
+                          class="form-control"
+                          [(ngModel)]="startDate"
+                          (change)="onDateFilterChange()"
+                        />
+                      </div>
+                      <div class="col-md-3">
+                        <label for="endDate" class="form-label">
+                          {{
+                            "admin.reports.user-activity.end-date" | translate
+                          }}
+                        </label>
+                        <input
+                          type="month"
+                          id="endDate"
+                          class="form-control"
+                          [(ngModel)]="endDate"
+                          (change)="onDateFilterChange()"
+                        />
+                      </div>
+                      <div class="col-md-6 d-flex align-items-end">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          (click)="resetDateFilter()"
+                        >
+                          {{
+                            "admin.reports.user-activity.reset-filter"
+                              | translate
+                          }}
+                        </button>
+                      </div>
+                    </div>
+                  }
+
+                  <!-- Line Chart - Show after data is loaded from API -->
+                  @if (chartDataLoaded) {
+                    <div
+                      #trendChartContainer
+                      class="chart-container"
+                      style="width: 100%"
+                    ></div>
+                  } @else {
+                    <div class="alert alert-info" role="alert">
+                      {{ "loading" | translate }}
+                    </div>
+                  }
                 </div>
               }
             </div>
@@ -250,22 +287,31 @@
 
               @if (users) {
                 <div>
-                  <button class="btn btn-primary mb-3" (click)="downloadCSV()">
-                    <i class="bi bi-download"></i>
-                    {{ "admin.reports.user-activity.download-csv" | translate }}
-                  </button>
-
                   <!-- Search Box -->
-                  <div class="mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="{{
-                        'admin.reports.user-activity.search-by-email-or-name'
-                          | translate
-                      }}"
-                      [(ngModel)]="searchEmail"
-                    />
+                  <div class="d-flex justify-content-between gap-2 mb-3">
+                    <div class="flex-grow-1">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="{{
+                          'admin.reports.user-activity.search-by-email-or-name'
+                            | translate
+                        }}"
+                        [(ngModel)]="searchEmail"
+                        (ngModelChange)="currentPage = 1"
+                      />
+                    </div>
+                    <div class="flex-grow-1 d-flex justify-content-end">
+                      <button
+                        class="btn btn-primary mb-3"
+                        (click)="downloadCSV()"
+                      >
+                        <i class="bi bi-download"></i>
+                        {{
+                          "admin.reports.user-activity.download-csv" | translate
+                        }}
+                      </button>
+                    </div>
                   </div>
 
                   <!-- Users Table -->
@@ -382,7 +428,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        @for (user of getFilteredUsers(); track user.email) {
+                        @for (user of getPaginatedUsers(); track user.email) {
                           <tr>
                             <td>{{ user.userName }}</td>
                             <td>{{ user.email }}</td>
@@ -427,6 +473,76 @@
                         }
                       </tbody>
                     </table>
+                  </div>
+
+                  @if (getFilteredUsers().length > itemsPerPage) {
+                    <div class="d-flex justify-content-center mt-3">
+                      <ngb-pagination
+                        [collectionSize]="getFilteredUsers().length"
+                        [pageSize]="itemsPerPage"
+                        [(page)]="currentPage"
+                        [maxSize]="5"
+                        [rotate]="true"
+                        [boundaryLinks]="true"
+                      ></ngb-pagination>
+                    </div>
+                  }
+                  <h5>
+                    {{
+                      "admin.reports.user-activity.users-indicators" | translate
+                    }}
+                  </h5>
+                  <div class="row g-3 mb-4">
+                    <div class="col-12 col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div
+                            #submissionsChartContainer
+                            style="height: 320px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div
+                            #reviewsChartContainer
+                            style="height: 320px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div
+                            #approvalsChartContainer
+                            style="height: 320px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div
+                            #rejectionsChartContainer
+                            style="height: 320px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <div
+                            #withdrawalsChartContainer
+                            style="height: 320px"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               }
