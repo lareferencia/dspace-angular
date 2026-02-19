@@ -44,6 +44,10 @@ export interface ReportSummary {
   totalUsers: number;
 }
 
+export interface SummaryWithTrendData extends ReportSummary {
+  trendData: { [month: string]: { [actionType: string]: number } };
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -53,19 +57,11 @@ export class UserActivityReportService {
   constructor(private http: HttpClient) {}
 
   /**
-   * Get the full user activity report
+   * Get all user statistics
    */
-  getFullReport(): Observable<UserActivityReport> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/report').toString();
-    return this.http.get<UserActivityReport>(url);
-  }
-
-  /**
-   * Get statistics for a specific user by email
-   */
-  getUserReport(email: string): Observable<UserActivityStats> {
-    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/user', encodeURIComponent(email)).toString();
-    return this.http.get<UserActivityStats>(url);
+  getUsers(): Observable<UserActivityStats[]> {
+    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/users').toString();
+    return this.http.get<UserActivityStats[]>(url);
   }
 
   /**
@@ -82,5 +78,13 @@ export class UserActivityReportService {
   getAllActions(): Observable<UserAction[]> {
     const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/actions').toString();
     return this.http.get<UserAction[]>(url);
+  }
+
+  /**
+   * Get summary statistics with trend data aggregated by month
+   */
+  getSummaryWithTrends(): Observable<SummaryWithTrendData> {
+    const url = new RESTURLCombiner(this.appConfig.rest.baseUrl, '/reporting/user-activity/summary-with-trends').toString();
+    return this.http.get<SummaryWithTrendData>(url);
   }
 }

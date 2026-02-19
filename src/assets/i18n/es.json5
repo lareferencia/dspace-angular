@@ -1142,41 +1142,41 @@
   // "admin.reports.user-activity.summary": "Summary",
   "admin.reports.user-activity.summary": "Resumen",
 
-  // "admin.reports.user-activity.userStats": "User Statistics",
-  "admin.reports.user-activity.userStats": "Estadísticas de usuario",
+  // "admin.reports.user-activity.user-stats": "User Statistics",
+  "admin.reports.user-activity.user-stats": "Estadísticas de usuario",
 
   // "admin.reports.user-activity.actions": "All Actions",
   "admin.reports.user-activity.actions": "Todas las acciones",
 
-  // "admin.reports.user-activity.totalUsers": "Total Users",
-  "admin.reports.user-activity.totalUsers": "Total de usuarios",
+  // "admin.reports.user-activity.total-users": "Total Users",
+  "admin.reports.user-activity.total-users": "Total de usuarios",
 
-  // "admin.reports.user-activity.totalSubmissions": "Total Submissions",
-  "admin.reports.user-activity.totalSubmissions": "Total de envíos",
+  // "admin.reports.user-activity.total-submissions": "Total Submissions",
+  "admin.reports.user-activity.total-submissions": "Total de envíos",
 
-  // "admin.reports.user-activity.totalReviews": "Total Reviews",
-  "admin.reports.user-activity.totalReviews": "Total de revisiones",
+  // "admin.reports.user-activity.total-reviews": "Total Reviews",
+  "admin.reports.user-activity.total-reviews": "Total de revisiones",
 
-  // "admin.reports.user-activity.totalApprovals": "Total Approvals",
-  "admin.reports.user-activity.totalApprovals": "Total de aprobaciones",
+  // "admin.reports.user-activity.total-approvals": "Total Approvals",
+  "admin.reports.user-activity.total-approvals": "Total de aprobaciones",
 
-  // "admin.reports.user-activity.totalRejections": "Total Rejections",
-  "admin.reports.user-activity.totalRejections": "Total de rechazos",
+  // "admin.reports.user-activity.total-rejections": "Total Rejections",
+  "admin.reports.user-activity.total-rejections": "Total de rechazos",
 
-  // "admin.reports.user-activity.totalWithdrawals": "Total Withdrawals",
-  "admin.reports.user-activity.totalWithdrawals": "Total de retiros",
+  // "admin.reports.user-activity.total-withdrawals": "Total Withdrawals",
+  "admin.reports.user-activity.total-withdrawals": "Total de retiros",
 
-  // "admin.reports.user-activity.reportSummary": "Report Summary",
-  "admin.reports.user-activity.reportSummary": "Resumen del informe",
+  // "admin.reports.user-activity.report-summary": "Report Summary",
+  "admin.reports.user-activity.report-summary": "Resumen del informe",
 
-  // "admin.reports.user-activity.userStatistics": "User Statistics",
-  "admin.reports.user-activity.userStatistics": "Estadísticas de usuario",
+  // "admin.reports.user-activity.user-statistics": "User Statistics",
+  "admin.reports.user-activity.user-statistics": "Estadísticas de usuario",
 
-  // "admin.reports.user-activity.allActions": "All Actions",
-  "admin.reports.user-activity.allActions": "Todas las acciones",
+  // "admin.reports.user-activity.all-actions": "All Actions",
+  "admin.reports.user-activity.all-actions": "Todas las acciones",
 
-  // "admin.reports.user-activity.downloadCSV": "Download CSV",
-  "admin.reports.user-activity.downloadCSV": "Descargar CSV",
+  // "admin.reports.user-activity.download-CSV": "Download CSV",
+  "admin.reports.user-activity.download-CSV": "Descargar CSV",
 
   // "admin.reports.user-activity.name": "Name",
   "admin.reports.user-activity.name": "Nombre",
@@ -1231,6 +1231,27 @@
 
   // "admin.reports.user-activity.noResults": "No results found",
   "admin.reports.user-activity.noResults": "No se encontraron resultados",
+
+  // "admin.reports.user-activity.activity-trends": "Activity Trends by Month",
+  "admin.reports.user-activity.activity-trends": "Tendencias de Actividad por Mes",
+
+  // "admin.reports.user-activity.start-date": "Start Date (YYYY-MM)",
+  "admin.reports.user-activity.start-date": "Fecha de Inicio (YYYY-MM)",
+
+  // "admin.reports.user-activity.end-date": "End Date (YYYY-MM)",
+  "admin.reports.user-activity.end-date": "Fecha de Fin (YYYY-MM)",
+
+  // "admin.reports.user-activity.reset-filter": "Reset Filter",
+  "admin.reports.user-activity.reset-filter": "Restablecer Filtro",
+
+  // "admin.reports.user-activity.download-csv": "Download CSV",
+  "admin.reports.user-activity.download-csv": "Descargar CSV",
+
+  // "admin.reports.user-activity.search-by-email-or-name": "Search by email or name...",
+  "admin.reports.user-activity.search-by-email-or-name": "Buscar por email o nombre...",
+
+  // "admin.reports.user-activity.no-trend-data": "No trend data available for selected period",
+  "admin.reports.user-activity.no-trend-data": "Sin datos de tendencia disponibles para el período seleccionado",
 
   // "admin.search.breadcrumbs": "Administrative Search",
   "admin.search.breadcrumbs": "Búsqueda administrativa",
