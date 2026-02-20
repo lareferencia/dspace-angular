@@ -15,10 +15,10 @@ import { MenuItemType } from '../menu-item-type.model';
 import { AbstractMenuProvider, PartialMenuSection } from '../menu-provider.model';
 
 /**
- * Menu provider to create the "Users Activity Report" menu in the admin sidebar
+ * Menu provider to create the "Users Activities Report" menu in the admin sidebar
  */
 @Injectable()
-export class UsersActivityReportMenuProvider extends AbstractMenuProvider {
+export class UsersActivitiesReportMenuProvider extends AbstractMenuProvider {
   constructor(
     protected authorizationService: AuthorizationDataService,
   ) {
@@ -35,8 +35,8 @@ export class UsersActivityReportMenuProvider extends AbstractMenuProvider {
             visible: isSiteAdmin,
             model: {
               type: MenuItemType.LINK,
-              text: 'menu.section.reports.users-activity',
-              link: '/admin/reports/users-activity',
+              text: 'menu.section.reports.users-activities',
+              link: '/admin/reports/users-activities',
             },
             icon: 'chart-line',
           },

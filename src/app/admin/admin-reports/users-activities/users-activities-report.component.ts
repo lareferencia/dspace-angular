@@ -7,16 +7,16 @@ import ApexCharts, { ApexOptions } from 'apexcharts';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
-import { ReportSummary, SummaryWithTrendData, UserAction, UserActivityReport, UserActivityReportService, UserActivityStats } from './users-activity-report.service';
+import { ReportSummary, SummaryWithTrendData, UserAction, UserActivityReport, UserActivityReportService, UserActivityStats } from './users-activities-report.service';
 
 @Component({
-  selector: 'ds-users-activity-report',
+  selector: 'ds-users-activities-report',
   standalone: true,
   imports: [CommonModule, FormsModule, TranslateModule, NgbModule],
-  templateUrl: './users-activity-report.component.html',
-  styleUrls: ['./users-activity-report.component.scss']
+  templateUrl: './users-activities-report.component.html',
+  styleUrls: ['./users-activities-report.component.scss']
 })
-export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDestroy {
+export class UserActivitiesReportComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('trendChartContainer') chartContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('submissionsChartContainer') submissionsChartContainer?: ElementRef<HTMLDivElement>;
   @ViewChild('reviewsChartContainer') reviewsChartContainer?: ElementRef<HTMLDivElement>;
@@ -362,7 +362,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
   }
 
   private getUserChartTitle(metric: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals'): string {
-    return this.translate.instant(`admin.reports.users-activity.top-10-${metric}`);
+    return this.translate.instant(`admin.reports.users-activities.top-10-${metric}`);
   }
 
   private getTopUsersBy(metric: 'submissions' | 'reviews' | 'approvals' | 'rejections' | 'withdrawals') {
@@ -415,12 +415,12 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     const series = [{ name: title, data: data.map(item => item.value) }];
 
     const titleText = this.viewType === 'yearly'
-      ? this.translate.instant('admin.reports.users-activity.yearly')
-      : this.translate.instant('admin.reports.users-activity.monthly');
+      ? this.translate.instant('admin.reports.users-activities.yearly')
+      : this.translate.instant('admin.reports.users-activities.monthly');
     const xAxisTitle = this.viewType === 'yearly'
-      ? this.translate.instant('admin.reports.users-activity.year')
-      : this.translate.instant('admin.reports.users-activity.month');
-    const yAxisTitle = this.translate.instant('admin.reports.users-activity.count');
+      ? this.translate.instant('admin.reports.users-activities.year')
+      : this.translate.instant('admin.reports.users-activities.month');
+    const yAxisTitle = this.translate.instant('admin.reports.users-activities.count');
 
     const options: ApexOptions = {
       chart: {
@@ -670,10 +670,10 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     const actionTypes = ['SUBMITTED', 'APPROVED', 'REJECTED', 'WITHDRAWN'];
 
     const legendLabels: { [key: string]: string } = {
-      SUBMITTED: this.translate.instant('admin.reports.users-activity.submitted'),
-      APPROVED: this.translate.instant('admin.reports.users-activity.approved'),
-      REJECTED: this.translate.instant('admin.reports.users-activity.rejected'),
-      WITHDRAWN: this.translate.instant('admin.reports.users-activity.withdrawn')
+      SUBMITTED: this.translate.instant('admin.reports.users-activities.submitted'),
+      APPROVED: this.translate.instant('admin.reports.users-activities.approved'),
+      REJECTED: this.translate.instant('admin.reports.users-activities.rejected'),
+      WITHDRAWN: this.translate.instant('admin.reports.users-activities.withdrawn')
     };
 
     for (const actionType of actionTypes) {
@@ -722,12 +722,12 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     container.innerHTML = '';
 
     const titleText = this.viewType === 'yearly'
-      ? this.translate.instant('admin.reports.users-activity.yearly')
-      : this.translate.instant('admin.reports.users-activity.monthly');
+      ? this.translate.instant('admin.reports.users-activities.yearly')
+      : this.translate.instant('admin.reports.users-activities.monthly');
     const xAxisTitle = this.viewType === 'yearly'
-      ? this.translate.instant('admin.reports.users-activity.year')
-      : this.translate.instant('admin.reports.users-activity.month');
-    const yAxisTitle = this.translate.instant('admin.reports.users-activity.count');
+      ? this.translate.instant('admin.reports.users-activities.year')
+      : this.translate.instant('admin.reports.users-activities.month');
+    const yAxisTitle = this.translate.instant('admin.reports.users-activities.count');
 
     const options: ApexOptions = {
       chart: {
@@ -822,7 +822,7 @@ export class UserActivityReportComponent implements OnInit, AfterViewInit, OnDes
     const url = URL.createObjectURL(blob);
 
     link.setAttribute('href', url);
-    link.setAttribute('download', `users-activity-report-${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `users-activities-report-${new Date().toISOString().split('T')[0]}.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
